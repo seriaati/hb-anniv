@@ -116,7 +116,7 @@ function TimelineItem({ date, event, isLast = false }: { date: string; event: st
   return (
     <motion.div variants={fadeInUp} className="flex items-start gap-4">
       <div className="flex flex-col items-center">
-        <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex-shrink-0"></div>
+        <div className="w-4 h-4 bg-gradient-to-r from-red-500 to-purple-600 rounded-full flex-shrink-0"></div>
         {!isLast && <div className="w-0.5 h-16 bg-zinc-700/50 mt-2"></div>}
       </div>
       <div className="pb-8">
