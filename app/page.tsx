@@ -99,7 +99,6 @@ function PersonCard({ name, role, avatar }: { name: string; role: string; avatar
                 alt={name}
                 width={64}
                 height={64}
-                quality={75}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -308,7 +307,7 @@ export default function HoyoBuddyAnniversary() {
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/avatars/seria.jpg"
+                          src="/avatars/seria.png?height=64&width=64"
                           alt="seria"
                           width={64}
                           height={64}
@@ -328,7 +327,7 @@ export default function HoyoBuddyAnniversary() {
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/avatars/ayasaku_.jpg"
+                          src="/avatars/ayasaku_.png?height=64&width=64"
                           alt="ayasaku_"
                           width={64}
                           height={64}
@@ -348,7 +347,7 @@ export default function HoyoBuddyAnniversary() {
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/avatars/hydrogened.jpg"
+                          src="/avatars/hydrogened.png?height=64&width=64"
                           alt="hydrogened"
                           width={64}
                           height={64}
@@ -368,7 +367,7 @@ export default function HoyoBuddyAnniversary() {
                     <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/avatars/charaanimates.jpg"
+                          src="/avatars/charaanimates.png?height=64&width=64"
                           alt="charraanimates"
                           width={64}
                           height={64}
@@ -402,15 +401,15 @@ export default function HoyoBuddyAnniversary() {
             </motion.h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <PersonCard name="Lucas" role="50$" avatar="/avatars/nemboi.jpg" />
-              <PersonCard name="hakatashi" role="43$" avatar="/avatars/hakatashi.jpg" />
-              <PersonCard name="bunny" role="30$" avatar="/avatars/bunny.gg.jpg" />
-              <PersonCard name="Syaoran" role="$21" avatar="/avatars/syaorandesu.jpg" />
-              <PersonCard name="FichteFoll" role="10$" avatar="/avatars/fichtefoll.jpg" />
-              <PersonCard name="Crystal Arrow" role="5$" avatar="/avatars/crystalarrow.jpg" />
-              <PersonCard name="Chara Animates" role="5$" avatar="/avatars/charaanimates.jpg" />
-              <PersonCard name="Wocardo" role="5$" avatar="/avatars/wocardo.jpg" />
-              <PersonCard name="Trollerr" role="1$" avatar="/avatars/trollerr.jpg" />
+              <PersonCard name="Lucas" role="50$" avatar="/avatars/nemboi.png?height=64&width=64" />
+              <PersonCard name="hakatashi" role="43$" avatar="/avatars/hakatashi.png?height=64&width=64" />
+              <PersonCard name="bunny" role="30$" avatar="/avatars/bunny.gg.png?height=64&width=64" />
+              <PersonCard name="Syaoran" role="$21" avatar="/avatars/syaorandesu.png?height=64&width=64" />
+              <PersonCard name="FichteFoll" role="10$" avatar="/avatars/fichtefoll.png?height=64&width=64" />
+              <PersonCard name="Crystal Arrow" role="5$" avatar="/avatars/crystalarrow.png?height=64&width=64" />
+              <PersonCard name="Chara Animates" role="5$" avatar="/avatars/charaanimates.png?height=64&width=64" />
+              <PersonCard name="Wocardo" role="5$" avatar="/avatars/wocardo.png?height=64&width=64" />
+              <PersonCard name="Trollerr" role="1$" avatar="/avatars/trollerr.png?height=64&width=64" />
             </div>
 
             <motion.p className="text-center text-zinc-300 mt-12 text-lg leading-relaxed" variants={fadeInUp}>
@@ -446,21 +445,21 @@ export default function HoyoBuddyAnniversary() {
             </motion.h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              <PersonCard name="Ayase" role="Indonesian" avatar="/avatars/ayase_meguri.jpg" />
-              <PersonCard name="Chara Animates" role="Vietnamese" avatar="/avatars/charaanimates.jpg" />
-              <PersonCard name="Dinnerbone_3rd" role="Chinese (Simplified)" avatar="/avatars/db3_lost_mind.jpg" />
-              <PersonCard name="Ditroit" role="Spanish" avatar="/avatars/ditroit.jpg" />
-              <PersonCard name="Aya Saku" role="Chinese (Traditional)" avatar="/avatars/ayasaku_.jpg" />
-              <PersonCard name="Lucas" role="French" avatar="/avatars/nemboi.jpg" />
-              <PersonCard name="Eden" role="Dutch" avatar="/avatars/perfectdelusions.jpg" />
-              <PersonCard name="kakakaaa" role="Japanese" avatar="/avatars/ka.kaka.jpg" />
-              <PersonCard name="Trollerr" role="Vietnamese" avatar="/avatars/trollerr.jpg" />
-              <PersonCard name="Fuji" role="Indonesian" avatar="/avatars/monoceruse.jpg" />
-              <PersonCard name="DarkAngel" role="Arabic" avatar="/avatars/q3yb.jpg" />
-              <PersonCard name="DarkAssassin" role="Russian" avatar="/avatars/darkassassin.jpg" />
-              <PersonCard name="ニャオハ" role="French" avatar="/avatars/c330x.jpg" />
-              <PersonCard name="Ginn" role="Chinese (Traditional)" avatar="/avatars/g1nn.jpg" />
-              <PersonCard name="Anubhav" role="Hindi" avatar="/avatars/anubhav.jpg" />
+              <PersonCard name="Ayase" role="Indonesian" avatar="/avatars/ayase_meguri.png?height=64&width=64" />
+              <PersonCard name="Chara Animates" role="Vietnamese" avatar="/avatars/charaanimates.png?height=64&width=64" />
+              <PersonCard name="Dinnerbone_3rd" role="Chinese (Simplified)" avatar="/avatars/db3_lost_mind.png?height=64&width=64" />
+              <PersonCard name="Ditroit" role="Spanish" avatar="/avatars/ditroit.png?height=64&width=64" />
+              <PersonCard name="Aya Saku" role="Chinese (Traditional)" avatar="/avatars/ayasaku_.png?height=64&width=64" />
+              <PersonCard name="Lucas" role="French" avatar="/avatars/nemboi.png?height=64&width=64" />
+              <PersonCard name="Eden" role="Dutch" avatar="/avatars/perfectdelusions.png?height=64&width=64" />
+              <PersonCard name="kakakaaa" role="Japanese" avatar="/avatars/ka.kaka.png?height=64&width=64" />
+              <PersonCard name="Trollerr" role="Vietnamese" avatar="/avatars/trollerr.png?height=64&width=64" />
+              <PersonCard name="Fuji" role="Indonesian" avatar="/avatars/monoceruse.png?height=64&width=64" />
+              <PersonCard name="DarkAngel" role="Arabic" avatar="/avatars/q3yb.png?height=64&width=64" />
+              <PersonCard name="DarkAssassin" role="Russian" avatar="/avatars/darkassassin.png?height=64&width=64" />
+              <PersonCard name="ニャオハ" role="French" avatar="/avatars/c330x.png?height=64&width=64" />
+              <PersonCard name="Ginn" role="Chinese (Traditional)" avatar="/avatars/g1nn.png?height=64&width=64" />
+              <PersonCard name="Anubhav" role="Hindi" avatar="/avatars/anubhav.png?height=64&width=64" />
             </div>
 
             <motion.p className="text-center text-zinc-300 mt-12 text-lg leading-relaxed" variants={fadeInUp}>
