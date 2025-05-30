@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Een Jaar",
+    "subtitle": "We vieren één fantastisch jaar met Hoyo Buddy – de beste Discord bot voor Hoyoverse gamers.",
+    "badge": "🎉 Jubileum Special"
+  },
+  "stats": {
+    "title": "In Cijfers",
+    "commands": "Commando's/Dag",
+    "servers": "Servers", 
+    "users": "Gebruikers",
+    "stars": "GitHub Sterren",
+    "updates": "Updates",
+    "accounts": "Gekkopelde Accounts"
+  },
+  "timeline": {
+    "title": "Onze Reis",
+    "events": {
+      "project_started": "Project gestart",
+      "first_release": "Eerste officiële release",
+      "reached_3000": "Bereikte 3,000 servers",
+      "reached_6000": "Bereikte 6,000 servers", 
+      "anniversary": "Bereikte 8.293 servers - Eenjarig Jubileum!"
+    }
+  },
+  "team": {
+    "title": "Hartelijk Dank, Teamleden",
+    "roles": {
+      "developer": "Ontwikkelaar",
+      "designer": "Ontwerper", 
+      "pr": "PR",
+      "documentation": "Documentatie"
+    }
+  },
+  "supporters": {
+    "title": "Hartelijk Dank, Supporters",
+    "description": "Jullie steun heeft Hoyo Buddy gemaakt tot wat het nu is.",
+    "button": "Steun Ons"
+  },
+  "translators": {
+    "title": "Hartelijk Dank, Vertalers",
+    "description": "Dankzij jullie toewijding spreekt Hoyo Buddy meerdere talen en bedient het een wereldwijde gemeenschap.",
+    "button": "Word een Vertaler",
+    "languages": {
+      "indonesian": "Indonesisch",
+      "vietnamese": "Vietnamees",
+      "chinese_simplified": "Chinees (Vereenvoudigd)",
+      "spanish": "Spaans",
+      "chinese_traditional": "Chinees (Traditioneel)",
+      "french": "Frans",
+      "dutch": "Nederlands", 
+      "japanese": "Japans",
+      "arabic": "Arabisch",
+      "russian": "Russisch",
+      "hindi": "Hindi"
+    }
+  },
+  "thanks": {
+    "title": "Hartelijk Dank",
+    "message": "Het allerbelangrijkste, bedankt dat je deel uitmaakt van de Hoyo Buddy familie. Of je nu een dagelijkse gebruiker bent, een toevallige bezoeker, of iemand die ons voor het eerst ontdekt - jij maakt deze community speciaal",
+    "closing": "Op nog veel meer avonturen samen in de werelden van Hoyoverse! 🎮✨"
+  },
+  "giveaway": {
+    "title": "Jubileum Giveaway",
+    "description": "Doe mee met onze speciale jubileumsviering! We geven maandpassen weg.",
+    "button": "Word lid van onze Discord Server & doe mee met het Giveaway"
+  },
+  "footer": {
+    "copyright": "© 2025 Seria Ati. Alle rechten voorbehouden."
+  }
+}

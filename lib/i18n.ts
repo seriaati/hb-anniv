@@ -1,10 +1,15 @@
-export const locales = ['en', 'zh-TW'] as const
+export const locales = ['en', 'zh-TW', 'zh-CN', 'es', 'de', 'vi', 'ru'] as const
 export const defaultLocale = 'en' as const
 export type Locale = typeof locales[number]
 
 const dictionaries = {
     en: () => import('./dictionaries/en.json').then(m => m.default),
     'zh-TW': () => import('./dictionaries/zh-TW.json').then(m => m.default),
+    'zh-CN': () => import('./dictionaries/zh-CN.json').then(m => m.default),
+    es: () => import('./dictionaries/es.json').then(m => m.default),
+    de: () => import('./dictionaries/de.json').then(m => m.default),
+    vi: () => import('./dictionaries/vi.json').then(m => m.default),
+    ru: () => import('./dictionaries/ru.json').then(m => m.default),
 }
 
 export const getDictionary = async (locale: Locale) =>
