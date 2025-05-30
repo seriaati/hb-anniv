@@ -27,9 +27,9 @@
     "title": "感谢团队成员",
     "roles": {
       "developer": "开发者",
-      "designer": "设计师", 
-      "pr": "公开",
-      "documentation": "文档编写"
+      "designer": "设计师",
+      "pr": "公关",
+      "documentation": "文档"
     }
   },
   "supporters": {

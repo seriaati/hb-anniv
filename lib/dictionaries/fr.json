@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "Un An",
+    "subtitle": "Célébrons une année incroyable de Hoyo Buddy - le meilleur bot Discord pour les joueurs Hoyoverse.",
+    "badge": "🎉 Édition Spéciale Anniversaire"
+  },
+  "stats": {
+    "title": "En Chiffres",
+    "commands": "Commandes/Jour",
+    "servers": "Serveurs",
+    "users": "Utilisateurs",
+    "stars": "Étoiles GitHub",
+    "updates": "Mises à Jour",
+    "accounts": "Comptes Liés"
+  },
+  "timeline": {
+    "title": "Notre Parcours",
+    "events": {
+      "project_started": "Projet lancé",
+      "first_release": "Première version officielle",
+      "reached_3000": "3 000 serveurs atteints",
+      "reached_6000": "6 000 serveurs atteints",
+      "anniversary": "8 293 serveurs atteints - Premier Anniversaire !"
+    }
+  },
+  "team": {
+    "title": "Merci, Membres de l'Équipe",
+    "roles": {
+      "developer": "Développeur",
+      "designer": "Designer",
+      "pr": "Relations Publiques",
+      "documentation": "Documentation"
+    }
+  },
+  "supporters": {
+    "title": "Merci, Supporteurs",
+    "description": "Votre soutien a été déterminant pour faire de Hoyo Buddy ce qu'il est aujourd'hui.",
+    "button": "Nous Soutenir"
+  },
+  "translators": {
+    "title": "Merci, Traducteurs",
+    "description": "Grâce à votre dévouement, Hoyo Buddy parle plusieurs langues et sert une communauté mondiale.",
+    "button": "Devenir Traducteur",
+    "languages": {
+      "indonesian": "Indonésien",
+      "vietnamese": "Vietnamien",
+      "chinese_simplified": "Chinois (Simplifié)",
+      "spanish": "Espagnol",
+      "chinese_traditional": "Chinois (Traditionnel)",
+      "french": "Français",
+      "dutch": "Néerlandais",
+      "japanese": "Japonais",
+      "arabic": "Arabe",
+      "russian": "Russe",
+      "hindi": "Hindi"
+    }
+  },
+  "thanks": {
+    "title": "Merci",
+    "message": "Plus important encore, merci de faire partie de la famille Hoyo Buddy. Que vous soyez un utilisateur quotidien, un visiteur occasionnel ou quelqu'un qui nous découvre pour la première fois - vous rendez cette communauté spéciale.",
+    "closing": "Voici à de nombreuses autres aventures ensemble dans les mondes d'Hoyoverse ! 🎮✨"
+  },
+  "giveaway": {
+    "title": "Concours Anniversaire",
+    "description": "Rejoignez notre célébration spéciale d'anniversaire ! Nous offrons des pass mensuels.",
+    "button": "Rejoindre le Serveur Discord et Participer au Concours"
+  },
+  "footer": {
+    "copyright": "© 2025 Seria Ati. Tous droits réservés."
+  }
+}

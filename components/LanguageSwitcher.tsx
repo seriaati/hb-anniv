@@ -15,6 +15,7 @@ const languageNames = {
     vi: 'Tiếng Việt',
     ru: 'Русский',
     nl: 'Nederlands',
+    pt: 'Português',
 }
 
 export default function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
