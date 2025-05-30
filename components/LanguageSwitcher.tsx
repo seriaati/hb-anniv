@@ -13,8 +13,8 @@ const languageNames = {
     'zh-TW': '繁體中文',
     'zh-CN': '简体中文',
     vi: 'Tiếng Việt',
-    de: 'Deutsch',
     ru: 'Русский',
+    nl: 'Nederlands',
 }
 
 export default function LanguageSwitcher({ currentLocale }: { currentLocale: Locale }) {
@@ -59,8 +59,8 @@ export default function LanguageSwitcher({ currentLocale }: { currentLocale: Loc
                                 key={locale}
                                 onClick={() => switchLanguage(locale)}
                                 className={`w-full text-left px-4 py-3 text-sm transition-all duration-200 flex items-center gap-3 ${locale === currentLocale
-                                        ? 'bg-pink-500/20 text-pink-300 border-r-2 border-pink-500'
-                                        : 'text-zinc-300 hover:bg-zinc-700/50 hover:text-white'
+                                    ? 'bg-pink-500/20 text-pink-300 border-r-2 border-pink-500'
+                                    : 'text-zinc-300 hover:bg-zinc-700/50 hover:text-white'
                                     }`}
                             >
                                 <span className="font-medium">
