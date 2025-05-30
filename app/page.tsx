@@ -92,7 +92,7 @@ function PersonCard({ name, role, avatar }: { name: string; role: string; avatar
     <motion.div variants={fadeInUp}>
       <Card className="bg-zinc-900/40 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700/70 transition-all duration-300 group">
         <CardContent className="p-6 text-center">
-          <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-pink-500 to-purple-600 p-0.5">
+          <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
             <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
               <Image
                 src={avatar || "/placeholder.svg"}
@@ -152,7 +152,7 @@ export default function HoyoBuddyAnniversary() {
           style={{
             y: meshY1,
             background: "radial-gradient(circle at center, rgba(236, 72, 153, 0.6) 0%, rgba(236, 72, 153, 0) 70%)",
-            filter: "blur(80px)",
+            filter: "blur(60px)",
           }}
         />
 
@@ -162,7 +162,7 @@ export default function HoyoBuddyAnniversary() {
           style={{
             y: meshY2,
             background: "radial-gradient(circle at center, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0) 70%)",
-            filter: "blur(90px)",
+            filter: "blur(60px)",
           }}
         />
 
@@ -172,13 +172,13 @@ export default function HoyoBuddyAnniversary() {
           style={{
             y: meshY3,
             background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0) 70%)",
-            filter: "blur(100px)",
+            filter: "blur(60px)",
           }}
         />
       </div>
 
       {/* Frosted glass container */}
-      <div className="relative z-10 min-h-screen backdrop-blur-[100px] bg-zinc-900/20">
+      <div className="relative z-10 min-h-screen backdrop-blur-[60px] bg-zinc-900/20">
         {/* Hero Section */}
         <section ref={heroRef} className="min-h-screen flex items-center justify-center relative px-4">
           <motion.div
@@ -217,8 +217,7 @@ export default function HoyoBuddyAnniversary() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              Celebrating one incredible year of Hoyo Buddy - your ultimate Discord companion for Genshin Impact, Honkai
-              Star Rail, and Zenless Zone Zero
+              Celebrating one incredible year of Hoyo Buddy - the ultimate Discord companion for Hoyoverse gamers.
             </motion.p>
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.8 }}>
@@ -249,12 +248,12 @@ export default function HoyoBuddyAnniversary() {
             </motion.h2>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <StatCard icon={Zap} label="Commands/Min" value={1250} />
-              <StatCard icon={Server} label="Servers" value={15420} />
-              <StatCard icon={Users} label="Users" value={892000} />
-              <StatCard icon={Star} label="GitHub Stars" value={2847} />
-              <StatCard icon={RefreshCw} label="Updates" value={156} />
-              <StatCard icon={Link} label="Linked Accounts" value={445000} />
+              <StatCard icon={Zap} label="Commands/Day" value={1598} />
+              <StatCard icon={Server} label="Servers" value={8293} />
+              <StatCard icon={Users} label="Users" value={19252} />
+              <StatCard icon={Star} label="GitHub Stars" value={123} />
+              <StatCard icon={RefreshCw} label="Updates" value={3247} />
+              <StatCard icon={Link} label="Linked Accounts" value={33316} />
             </div>
           </motion.div>
         </section>
@@ -305,19 +304,19 @@ export default function HoyoBuddyAnniversary() {
               <motion.div variants={fadeInUp}>
                 <Card className="bg-zinc-900/40 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700/70 transition-all duration-300">
                   <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-pink-500 to-purple-600 p-0.5">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/placeholder.svg?height=64&width=64"
-                          alt="Team Member"
+                          src="/avatars/seria.png?height=64&width=64"
+                          alt="seria"
                           width={64}
                           height={64}
                           className="w-full h-full object-cover"
                         />
                       </div>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-1">Alex Chen</h3>
-                    <p className="text-zinc-400 text-sm">Lead Developer</p>
+                    <h3 className="text-lg font-bold text-white mb-1">seria</h3>
+                    <p className="text-zinc-400 text-sm">Developer</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -325,19 +324,19 @@ export default function HoyoBuddyAnniversary() {
               <motion.div variants={fadeInUp}>
                 <Card className="bg-zinc-900/40 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700/70 transition-all duration-300">
                   <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-pink-500 to-purple-600 p-0.5">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/placeholder.svg?height=64&width=64"
-                          alt="Team Member"
+                          src="/avatars/ayasaku_.png?height=64&width=64"
+                          alt="ayasaku_"
                           width={64}
                           height={64}
                           className="w-full h-full object-cover"
                         />
                       </div>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-1">Jamie Taylor</h3>
-                    <p className="text-zinc-400 text-sm">UI/UX Designer</p>
+                    <h3 className="text-lg font-bold text-white mb-1">Aya Saku</h3>
+                    <p className="text-zinc-400 text-sm">Designer</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -345,19 +344,19 @@ export default function HoyoBuddyAnniversary() {
               <motion.div variants={fadeInUp}>
                 <Card className="bg-zinc-900/40 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700/70 transition-all duration-300">
                   <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-pink-500 to-purple-600 p-0.5">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/placeholder.svg?height=64&width=64"
-                          alt="Team Member"
+                          src="/avatars/hydrogened.png?height=64&width=64"
+                          alt="hydrogened"
                           width={64}
                           height={64}
                           className="w-full h-full object-cover"
                         />
                       </div>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-1">Morgan Lee</h3>
-                    <p className="text-zinc-400 text-sm">Backend Engineer</p>
+                    <h3 className="text-lg font-bold text-white mb-1">Hydrogened</h3>
+                    <p className="text-zinc-400 text-sm">PR</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -365,19 +364,19 @@ export default function HoyoBuddyAnniversary() {
               <motion.div variants={fadeInUp}>
                 <Card className="bg-zinc-900/40 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700/70 transition-all duration-300">
                   <CardContent className="p-6 text-center">
-                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden bg-gradient-to-br from-pink-500 to-purple-600 p-0.5">
+                    <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden p-0.5">
                       <div className="w-full h-full rounded-full overflow-hidden bg-zinc-900/70">
                         <Image
-                          src="/placeholder.svg?height=64&width=64"
-                          alt="Team Member"
+                          src="/avatars/charaanimates.png?height=64&width=64"
+                          alt="charraanimates"
                           width={64}
                           height={64}
                           className="w-full h-full object-cover"
                         />
                       </div>
                     </div>
-                    <h3 className="text-lg font-bold text-white mb-1">Casey Park</h3>
-                    <p className="text-zinc-400 text-sm">Community Manager</p>
+                    <h3 className="text-lg font-bold text-white mb-1">Chara Animates</h3>
+                    <p className="text-zinc-400 text-sm">Documentation</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -402,29 +401,26 @@ export default function HoyoBuddyAnniversary() {
             </motion.h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <PersonCard name="Sarah Kim" role="Top Supporter" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Mike Johnson" role="Community Champion" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Emma Davis" role="Early Adopter" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="David Wilson" role="Bug Hunter" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard
-                name="Sophia Martinez"
-                role="Feature Suggester"
-                avatar="/placeholder.svg?height=64&width=64"
-              />
-              <PersonCard name="James Lee" role="Beta Tester" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Olivia Brown" role="Community Moderator" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Daniel Garcia" role="Discord Booster" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Emily Wilson" role="Content Creator" avatar="/placeholder.svg?height=64&width=64" />
+              <PersonCard name="Lucas" role="50$" avatar="/avatars/nemboi.png?height=64&width=64" />
+              <PersonCard name="hakatashi" role="43$" avatar="/avatars/hakatashi.png?height=64&width=64" />
+              <PersonCard name="bunny" role="30$" avatar="/avatars/bunny.gg.png?height=64&width=64" />
+              <PersonCard name="Syaoran" role="$21" avatar="/avatars/syaorandesu.png?height=64&width=64" />
+              <PersonCard name="FichteFoll" role="10$" avatar="/avatars/fichtefoll.png?height=64&width=64" />
+              <PersonCard name="Crystal Arrow" role="5$" avatar="/avatars/crystalarrow.png?height=64&width=64" />
+              <PersonCard name="Chara Animates" role="5$" avatar="/avatars/charaanimates.png?height=64&width=64" />
+              <PersonCard name="Wocardo" role="5$" avatar="/avatars/wocardo.png?height=64&width=64" />
+              <PersonCard name="Trollerr" role="1$" avatar="/avatars/trollerr.png?height=64&width=64" />
             </div>
 
             <motion.p className="text-center text-zinc-300 mt-12 text-lg leading-relaxed" variants={fadeInUp}>
-              Your support and feedback have been instrumental in making Hoyo Buddy what it is today.
+              Your support has been instrumental in making Hoyo Buddy what it is today.
             </motion.p>
 
             <motion.div className="text-center mt-8" variants={fadeInUp}>
               <Button
                 size="lg"
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
+                onClick={() => window.open("https://github.com/seriaati#support-my-work", "_blank")}
               >
                 Support Us
               </Button>
@@ -449,21 +445,21 @@ export default function HoyoBuddyAnniversary() {
             </motion.h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              <PersonCard name="Yuki Tanaka" role="Japanese" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Liu Wei" role="Chinese" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Maria Garcia" role="Spanish" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Hans Schmidt" role="German" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Sophie Dubois" role="French" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Antonio Rossi" role="Italian" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Olga Petrov" role="Russian" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Ji-hoon Park" role="Korean" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Ana Silva" role="Portuguese" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Fatima Al-Farsi" role="Arabic" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Raj Patel" role="Hindi" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Niran Chai" role="Thai" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Minh Nguyen" role="Vietnamese" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Lars Andersen" role="Danish" avatar="/placeholder.svg?height=64&width=64" />
-              <PersonCard name="Eva Kowalski" role="Polish" avatar="/placeholder.svg?height=64&width=64" />
+              <PersonCard name="Ayase" role="Indonesian" avatar="/avatars/ayase_meguri.png?height=64&width=64" />
+              <PersonCard name="Chara Animates" role="Vietnamese" avatar="/avatars/charaanimates.png?height=64&width=64" />
+              <PersonCard name="Dinnerbone_3rd" role="Chinese (Simplified)" avatar="/avatars/db3_lost_mind.png?height=64&width=64" />
+              <PersonCard name="Ditroit" role="Spanish" avatar="/avatars/ditroit.png?height=64&width=64" />
+              <PersonCard name="Aya Saku" role="Chinese (Traditional)" avatar="/avatars/ayasaku_.png?height=64&width=64" />
+              <PersonCard name="Lucas" role="French" avatar="/avatars/nemboi.png?height=64&width=64" />
+              <PersonCard name="Eden" role="Dutch" avatar="/avatars/perfectdelusions.png?height=64&width=64" />
+              <PersonCard name="kakakaaa" role="Japanese" avatar="/avatars/ka.kaka.png?height=64&width=64" />
+              <PersonCard name="Trollerr" role="Vietnamese" avatar="/avatars/trollerr.png?height=64&width=64" />
+              <PersonCard name="Fuji" role="Indonesian" avatar="/avatars/monoceruse.png?height=64&width=64" />
+              <PersonCard name="DarkAngel" role="Arabic" avatar="/avatars/q3yb.png?height=64&width=64" />
+              <PersonCard name="DarkAssassin" role="Russian" avatar="/avatars/darkassassin.png?height=64&width=64" />
+              <PersonCard name="ニャオハ" role="French" avatar="/avatars/c330x.png?height=64&width=64" />
+              <PersonCard name="Ginn" role="Chinese (Traditional)" avatar="/avatars/g1nn.png?height=64&width=64" />
+              <PersonCard name="Anubhav" role="Hindi" avatar="/avatars/anubhav.png?height=64&width=64" />
             </div>
 
             <motion.p className="text-center text-zinc-300 mt-12 text-lg leading-relaxed" variants={fadeInUp}>
@@ -474,6 +470,7 @@ export default function HoyoBuddyAnniversary() {
               <Button
                 size="lg"
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
+                onClick={() => window.open("https://github.com/seriaati/hoyo-buddy/blob/main/CONTRIBUTING.md", "_blank")}
               >
                 Become a Translator
               </Button>
@@ -506,15 +503,6 @@ export default function HoyoBuddyAnniversary() {
             <motion.p className="text-xl text-zinc-400 mb-12 leading-relaxed" variants={fadeInUp}>
               Here's to many more adventures together in the worlds of Hoyoverse! 🎮✨
             </motion.p>
-
-            <motion.div variants={fadeInUp}>
-              <Button
-                size="lg"
-                className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
-              >
-                Join Our Community
-              </Button>
-            </motion.div>
           </motion.div>
         </section>
 
@@ -536,16 +524,16 @@ export default function HoyoBuddyAnniversary() {
             </motion.h2>
 
             <motion.p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto leading-relaxed" variants={fadeInUp}>
-              Join our special anniversary celebration! We're giving away exclusive in-game rewards and premium Discord
-              perks to our amazing community.
+              Join our special anniversary celebration! We're giving away monthly passes.
             </motion.p>
 
             <motion.div variants={fadeInUp}>
               <Button
                 size="lg"
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
+                onClick={() => window.open("https://link.seria.moe/hb-dc", "_blank")}
               >
-                Join Discord & Enter Giveaway
+                Join Discord Server & Enter Giveaway
               </Button>
             </motion.div>
           </motion.div>
@@ -554,7 +542,7 @@ export default function HoyoBuddyAnniversary() {
         {/* Footer */}
         <footer className="py-12 px-4 border-t border-zinc-800/50 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-zinc-500">© 2024 Hoyo Buddy. Made with ❤️ for the Hoyoverse community.</p>
+            <p className="text-zinc-500">© 2025 Seria Ati. All rights reserved.</p>
           </div>
         </footer>
       </div>
