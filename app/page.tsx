@@ -115,7 +115,7 @@ function TimelineItem({ date, event, isLast = false }: { date: string; event: st
   return (
     <motion.div variants={fadeInUp} className="flex items-start gap-4">
       <div className="flex flex-col items-center">
-        <div className="w-4 h-4 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full flex-shrink-0"></div>
+        <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex-shrink-0"></div>
         {!isLast && <div className="w-0.5 h-16 bg-zinc-700/50 mt-2"></div>}
       </div>
       <div className="pb-8">
@@ -251,7 +251,7 @@ export default function HoyoBuddyAnniversary() {
               <StatCard icon={Zap} label="Commands/Day" value={1598} />
               <StatCard icon={Server} label="Servers" value={8293} />
               <StatCard icon={Users} label="Users" value={19252} />
-              <StatCard icon={Star} label="GitHub Stars" value={123} />
+              <StatCard icon={Star} label="GitHub Stars" value={124} />
               <StatCard icon={RefreshCw} label="Updates" value={3247} />
               <StatCard icon={Link} label="Linked Accounts" value={33316} />
             </div>
@@ -279,7 +279,7 @@ export default function HoyoBuddyAnniversary() {
               <TimelineItem date="June 7, 2024" event="First official release" />
               <TimelineItem date="November 23, 2024" event="Reached 3,000 servers" />
               <TimelineItem date="February 12, 2025" event="Reached 6,000 servers" />
-              <TimelineItem date="June 7, 2025" event="Reached 8,290 servers - One Year Anniversary!" isLast={true} />
+              <TimelineItem date="June 7, 2025" event="Reached 8,293 servers - One Year Anniversary!" isLast={true} />
             </div>
           </motion.div>
         </section>
