@@ -286,11 +286,11 @@ export default function HoyoBuddyAnniversary({
             </motion.h2>
 
             <div className="max-w-2xl mx-auto">
-              <TimelineItem date="October 23, 2023" event={dict.timeline.events.project_started} />
-              <TimelineItem date="June 7, 2024" event={dict.timeline.events.first_release} />
-              <TimelineItem date="November 23, 2024" event={dict.timeline.events.reached_3000} />
-              <TimelineItem date="February 12, 2025" event={dict.timeline.events.reached_6000} />
-              <TimelineItem date="June 7, 2025" event={dict.timeline.events.anniversary} isLast={true} />
+              <TimelineItem date={dict.timeline.times.project_started} event={dict.timeline.events.project_started} />
+              <TimelineItem date={dict.timeline.times.first_release} event={dict.timeline.events.first_release} />
+              <TimelineItem date={dict.timeline.times.reached_3000} event={dict.timeline.events.reached_3000} />
+              <TimelineItem date={dict.timeline.times.reached_6000} event={dict.timeline.events.reached_6000} />
+              <TimelineItem date={dict.timeline.times.anniversary} event={dict.timeline.events.anniversary} isLast={true} />
             </div>
           </motion.div>
         </section>
