@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import './globals.css'
 
 export const metadata: Metadata = {
@@ -24,7 +25,7 @@ export default function RootLayout({
       <meta property="og:title" content="Hoyo Buddy | 1st Year Anniversary"></meta>
       <meta property="og:description" content="Join us in celebrating the 1st anniversary of Hoyo Buddy with special giveaways!"></meta>
       <meta property="og:url" content="https://one.hb.seria.moe"></meta>
-      <body>{children} <Analytics /></body>
+      <body>{children} <Analytics /> <SpeedInsights /></body>
     </html>
   )
 }
