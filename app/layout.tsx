@@ -16,6 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
       <meta property="twitter:image" content="https://one.hb.seria.moe/preview.png"></meta>
       <meta property="twitter:card" content="summary_large_image"></meta>
       <meta property="twitter:title" content="Hoyo Buddy | 1st Year Anniversary"></meta>
