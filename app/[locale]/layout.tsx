@@ -31,12 +31,12 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
-        <meta property="twitter:image" content="https://one.hb.seria.moe/en/preview.png" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+        <meta property="twitter:image" content="/preview.png" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="Hoyo Buddy | 1st Year Anniversary" />
         <meta property="twitter:description" content="Join us in celebrating the 1st anniversary of Hoyo Buddy with special giveaways!" />
-        <meta property="og:image" content="https://one.hb.seria.moe/en/preview.png" />
+        <meta property="og:image" content="/preview.png" />
         <meta property="og:site_name" content="Hoyo Buddy" />
         <meta property="og:title" content="Hoyo Buddy | 1st Year Anniversary" />
         <meta property="og:description" content="Join us in celebrating the 1st anniversary of Hoyo Buddy with special giveaways!" />
