@@ -21,6 +21,13 @@
       "reached_3000": "3 000 serveurs atteints",
       "reached_6000": "6 000 serveurs atteints",
       "anniversary": "8 293 serveurs atteints - Premier Anniversaire !"
+    },
+    "times": {
+      "project_started": "23 octobre 2023",
+      "first_release": "7 juin 2024",
+      "reached_3000": "23 novembre 2024",
+      "reached_6000": "12 février 2025",
+      "anniversary": "7 juin 2025"
     }
   },
   "team": {

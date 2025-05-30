@@ -7,7 +7,7 @@
   "stats": {
     "title": "数据统计",
     "commands": "命令/天",
-    "servers": "服务器", 
+    "servers": "服务器",
     "users": "用户数",
     "stars": "GitHub 星数",
     "updates": "更新次数",
@@ -19,8 +19,15 @@
       "project_started": "专案启动",
       "first_release": "首次正式发布",
       "reached_3000": "已达到 3000 个服务器",
-      "reached_6000": "已达到 6000 个服务器", 
+      "reached_6000": "已达到 6000 个服务器",
       "anniversary": "已达到 8293 个服务器 —— 一周年！"
+    },
+    "times": {
+      "project_started": "October 23, 2023",
+      "first_release": "June 7, 2024",
+      "reached_3000": "November 23, 2024",
+      "reached_6000": "February 12, 2025",
+      "anniversary": "June 7, 2025"
     }
   },
   "team": {
@@ -48,7 +55,7 @@
       "spanish": "西班牙语",
       "chinese_traditional": "繁体中文",
       "french": "法语",
-      "dutch": "德语", 
+      "dutch": "德语",
       "japanese": "日语",
       "arabic": "阿拉伯语",
       "russian": "俄语",

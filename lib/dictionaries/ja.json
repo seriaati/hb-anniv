@@ -21,6 +21,13 @@
       "reached_3000": "3,000サーバー達成",
       "reached_6000": "6,000サーバー達成",
       "anniversary": "8,293サーバー達成 - 1周年記念！"
+    },
+    "times": {
+      "project_started": "2023年10月23日",
+      "first_release": "2024年6月7日",
+      "reached_3000": "2024年11月23日",
+      "reached_6000": "2025年2月12日",
+      "anniversary": "2025年6月7日"
     }
   },
   "team": {

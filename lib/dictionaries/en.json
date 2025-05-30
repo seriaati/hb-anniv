@@ -7,7 +7,7 @@
   "stats": {
     "title": "By the Numbers",
     "commands": "Commands/Day",
-    "servers": "Servers", 
+    "servers": "Servers",
     "users": "Users",
     "stars": "GitHub Stars",
     "updates": "Updates",
@@ -19,15 +19,22 @@
       "project_started": "Project started",
       "first_release": "First official release",
       "reached_3000": "Reached 3,000 servers",
-      "reached_6000": "Reached 6,000 servers", 
+      "reached_6000": "Reached 6,000 servers",
       "anniversary": "Reached 8,293 servers - One Year Anniversary!"
+    },
+    "times": {
+      "project_started": "October 23, 2023",
+      "first_release": "June 7, 2024",
+      "reached_3000": "November 23, 2024",
+      "reached_6000": "February 12, 2025",
+      "anniversary": "June 7, 2025"
     }
   },
   "team": {
     "title": "Thank You, Team Members",
     "roles": {
       "developer": "Developer",
-      "designer": "Designer", 
+      "designer": "Designer",
       "pr": "PR",
       "documentation": "Documentation"
     }
@@ -48,7 +55,7 @@
       "spanish": "Spanish",
       "chinese_traditional": "Chinese (Traditional)",
       "french": "French",
-      "dutch": "Dutch", 
+      "dutch": "Dutch",
       "japanese": "Japanese",
       "arabic": "Arabic",
       "russian": "Russian",

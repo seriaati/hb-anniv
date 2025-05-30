@@ -7,7 +7,7 @@
   "stats": {
     "title": "數據統計",
     "commands": "指令/天",
-    "servers": "伺服器", 
+    "servers": "伺服器",
     "users": "使用者",
     "stars": "GitHub 星數",
     "updates": "更新次數",
@@ -19,15 +19,22 @@
       "project_started": "專案啟動",
       "first_release": "首次正式發布",
       "reached_3000": "達到 3,000 個伺服器",
-      "reached_6000": "達到 6,000 個伺服器", 
+      "reached_6000": "達到 6,000 個伺服器",
       "anniversary": "達到 8,293 個伺服器 —— 一周年！"
+    },
+    "times": {
+      "project_started": "2023年10月23日",
+      "first_release": "2024年6月7日",
+      "reached_3000": "2024年11月23日",
+      "reached_6000": "2025年2月12日",
+      "anniversary": "2025年6月7日"
     }
   },
   "team": {
     "title": "感謝團隊成員",
     "roles": {
       "developer": "開發者",
-      "designer": "設計師", 
+      "designer": "設計師",
       "pr": "公關",
       "documentation": "文檔"
     }
@@ -48,7 +55,7 @@
       "spanish": "西班牙語",
       "chinese_traditional": "繁體中文",
       "french": "法語",
-      "dutch": "荷蘭語", 
+      "dutch": "荷蘭語",
       "japanese": "日語",
       "arabic": "阿拉伯語",
       "russian": "俄語",

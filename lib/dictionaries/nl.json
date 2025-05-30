@@ -7,7 +7,7 @@
   "stats": {
     "title": "In Cijfers",
     "commands": "Commando's/Dag",
-    "servers": "Servers", 
+    "servers": "Servers",
     "users": "Gebruikers",
     "stars": "GitHub Sterren",
     "updates": "Updates",
@@ -19,15 +19,22 @@
       "project_started": "Project gestart",
       "first_release": "Eerste officiële release",
       "reached_3000": "Bereikte 3,000 servers",
-      "reached_6000": "Bereikte 6,000 servers", 
+      "reached_6000": "Bereikte 6,000 servers",
       "anniversary": "Bereikte 8.293 servers - Eenjarig Jubileum!"
+    },
+    "times": {
+      "project_started": "October 23, 2023",
+      "first_release": "June 7, 2024",
+      "reached_3000": "November 23, 2024",
+      "reached_6000": "February 12, 2025",
+      "anniversary": "June 7, 2025"
     }
   },
   "team": {
     "title": "Hartelijk Dank, Teamleden",
     "roles": {
       "developer": "Ontwikkelaar",
-      "designer": "Ontwerper", 
+      "designer": "Ontwerper",
       "pr": "PR",
       "documentation": "Documentatie"
     }
@@ -48,7 +55,7 @@
       "spanish": "Spaans",
       "chinese_traditional": "Chinees (Traditioneel)",
       "french": "Frans",
-      "dutch": "Nederlands", 
+      "dutch": "Nederlands",
       "japanese": "Japans",
       "arabic": "Arabisch",
       "russian": "Russisch",

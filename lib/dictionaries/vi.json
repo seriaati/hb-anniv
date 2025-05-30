@@ -7,7 +7,7 @@
   "stats": {
     "title": "Những con số",
     "commands": "Lần dùng lệnh/ngày",
-    "servers": "Máy chủ", 
+    "servers": "Máy chủ",
     "users": "Người dùng",
     "stars": "Sao trên GitHub",
     "updates": "Lần cập nhật",
@@ -19,15 +19,22 @@
       "project_started": "Bắt đầu dự án",
       "first_release": "Lần đầu ra mắt chính thức",
       "reached_3000": "Bot đã được thêm vào 3.000 máy chủ",
-      "reached_6000": "Bot đã được thêm vào 6.000 máy chủ", 
+      "reached_6000": "Bot đã được thêm vào 6.000 máy chủ",
       "anniversary": "Bot đã được thêm vào 8.299 máy chủ - Sinh nhật một tuổi!"
+    },
+    "times": {
+      "project_started": "October 23, 2023",
+      "first_release": "June 7, 2024",
+      "reached_3000": "November 23, 2024",
+      "reached_6000": "February 12, 2025",
+      "anniversary": "June 7, 2025"
     }
   },
   "team": {
     "title": "Cảm ơn bạn, những thành viên của đội ngũ",
     "roles": {
       "developer": "Phát triển",
-      "designer": "Thiết kế", 
+      "designer": "Thiết kế",
       "pr": "Quảng bá",
       "documentation": "Tài liệu Wiki"
     }
@@ -48,7 +55,7 @@
       "spanish": "Tiếng Tây Ban Nha",
       "chinese_traditional": "Tiếng Trung (Phồn Thể)",
       "french": "Tiếng Pháp",
-      "dutch": "Tiếng Hà Lan", 
+      "dutch": "Tiếng Hà Lan",
       "japanese": "Tiếng Nhật",
       "arabic": "Tiếng Ả Rập",
       "russian": "Tiếng Nga",

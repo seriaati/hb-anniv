@@ -21,6 +21,13 @@
       "reached_3000": "Достигли 3 000 серверов",
       "reached_6000": "Достигли 6 000 серверов",
       "anniversary": "Достигли 8 293 серверов — годовщина!"
+    },
+    "times": {
+      "project_started": "October 23, 2023",
+      "first_release": "June 7, 2024",
+      "reached_3000": "November 23, 2024",
+      "reached_6000": "February 12, 2025",
+      "anniversary": "June 7, 2025"
     }
   },
   "team": {

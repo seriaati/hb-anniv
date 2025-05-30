@@ -21,6 +21,13 @@
       "reached_3000": "Alcanzamos los 3,000 servidores",
       "reached_6000": "Alcanzamos los 6,000 servidores",
       "anniversary": "Alcanzamos los 8,293 servidores - ¡Primer Aniversario!"
+    },
+    "times": {
+      "project_started": "October 23, 2023",
+      "first_release": "June 7, 2024",
+      "reached_3000": "November 23, 2024",
+      "reached_6000": "February 12, 2025",
+      "anniversary": "June 7, 2025"
     }
   },
   "team": {
