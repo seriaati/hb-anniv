@@ -1,5 +1,7 @@
 "use client"
 
+import LanguageSwitcher from './LanguageSwitcher'
+import { Dictionary, Locale } from '@/lib/i18n'
 import { useEffect, useRef } from "react"
 import { motion, useInView, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -126,7 +128,13 @@ function TimelineItem({ date, event, isLast = false }: { date: string; event: st
   )
 }
 
-export default function HoyoBuddyAnniversary() {
+export default function HoyoBuddyAnniversary({
+  dict,
+  locale
+}: {
+  dict: Dictionary
+  locale: Locale
+}) {
   const { scrollYProgress } = useScroll()
   const meshY1 = useTransform(scrollYProgress, [0, 1], [0, 200])
   const meshY2 = useTransform(scrollYProgress, [0, 1], [0, -150])
@@ -144,6 +152,9 @@ export default function HoyoBuddyAnniversary() {
 
   return (
     <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
+      <div className="fixed top-4 right-4 z-50">
+        <LanguageSwitcher currentLocale={locale} />
+      </div>
       {/* Colorful background gradients */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Pink blob */}
@@ -208,7 +219,7 @@ export default function HoyoBuddyAnniversary() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.4 }}
             >
-              One Year
+              {dict.hero.title}
             </motion.h1>
 
             <motion.p
@@ -217,7 +228,7 @@ export default function HoyoBuddyAnniversary() {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              Celebrating one incredible year of Hoyo Buddy - the ultimate Discord companion for Hoyoverse gamers.
+              {dict.hero.subtitle}
             </motion.p>
 
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.7, delay: 0.8 }}>
@@ -225,7 +236,7 @@ export default function HoyoBuddyAnniversary() {
                 variant="outline"
                 className="bg-zinc-800/70 text-white border border-zinc-700/70 hover:border-pink-500/50 text-lg px-4 py-2 backdrop-blur-sm"
               >
-                🎉 Anniversary Special
+                {dict.hero.badge}
               </Badge>
             </motion.div>
           </motion.div>
@@ -244,16 +255,16 @@ export default function HoyoBuddyAnniversary() {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight"
               variants={fadeInUp}
             >
-              By the Numbers
+              {dict.stats.title}
             </motion.h2>
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-              <StatCard icon={Zap} label="Commands/Day" value={1598} />
-              <StatCard icon={Server} label="Servers" value={8293} />
-              <StatCard icon={Users} label="Users" value={19252} />
-              <StatCard icon={Star} label="GitHub Stars" value={124} />
-              <StatCard icon={RefreshCw} label="Updates" value={3247} />
-              <StatCard icon={Link} label="Linked Accounts" value={33316} />
+              <StatCard icon={Zap} label={dict.stats.commands} value={1598} />
+              <StatCard icon={Server} label={dict.stats.servers} value={8293} />
+              <StatCard icon={Users} label={dict.stats.users} value={19252} />
+              <StatCard icon={Star} label={dict.stats.stars} value={124} />
+              <StatCard icon={RefreshCw} label={dict.stats.updates} value={3247} />
+              <StatCard icon={Link} label={dict.stats.accounts} value={33316} />
             </div>
           </motion.div>
         </section>
@@ -271,15 +282,15 @@ export default function HoyoBuddyAnniversary() {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight"
               variants={fadeInUp}
             >
-              Our Journey
+              {dict.timeline.title}
             </motion.h2>
 
             <div className="max-w-2xl mx-auto">
-              <TimelineItem date="October 23, 2023" event="Project started" />
-              <TimelineItem date="June 7, 2024" event="First official release" />
-              <TimelineItem date="November 23, 2024" event="Reached 3,000 servers" />
-              <TimelineItem date="February 12, 2025" event="Reached 6,000 servers" />
-              <TimelineItem date="June 7, 2025" event="Reached 8,293 servers - One Year Anniversary!" isLast={true} />
+              <TimelineItem date="October 23, 2023" event={dict.timeline.events.project_started} />
+              <TimelineItem date="June 7, 2024" event={dict.timeline.events.first_release} />
+              <TimelineItem date="November 23, 2024" event={dict.timeline.events.reached_3000} />
+              <TimelineItem date="February 12, 2025" event={dict.timeline.events.reached_6000} />
+              <TimelineItem date="June 7, 2025" event={dict.timeline.events.anniversary} isLast={true} />
             </div>
           </motion.div>
         </section>
@@ -297,7 +308,7 @@ export default function HoyoBuddyAnniversary() {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight"
               variants={fadeInUp}
             >
-              Thank You, Team Members
+              {dict.team.title}
             </motion.h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -316,7 +327,7 @@ export default function HoyoBuddyAnniversary() {
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1">seria</h3>
-                    <p className="text-zinc-400 text-sm">Developer</p>
+                    <p className="text-zinc-400 text-sm">{dict.team.roles.developer}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -336,7 +347,7 @@ export default function HoyoBuddyAnniversary() {
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1">Aya Saku</h3>
-                    <p className="text-zinc-400 text-sm">Designer</p>
+                    <p className="text-zinc-400 text-sm">{dict.team.roles.designer}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -356,7 +367,7 @@ export default function HoyoBuddyAnniversary() {
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1">Hydrogened</h3>
-                    <p className="text-zinc-400 text-sm">PR</p>
+                    <p className="text-zinc-400 text-sm">{dict.team.roles.pr}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -376,7 +387,7 @@ export default function HoyoBuddyAnniversary() {
                       </div>
                     </div>
                     <h3 className="text-lg font-bold text-white mb-1">Chara Animates</h3>
-                    <p className="text-zinc-400 text-sm">Documentation</p>
+                    <p className="text-zinc-400 text-sm">{dict.team.roles.documentation}</p>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -397,7 +408,7 @@ export default function HoyoBuddyAnniversary() {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight"
               variants={fadeInUp}
             >
-              Thank You, Supporters
+              {dict.supporters.title}
             </motion.h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -413,7 +424,7 @@ export default function HoyoBuddyAnniversary() {
             </div>
 
             <motion.p className="text-center text-zinc-300 mt-12 text-lg leading-relaxed" variants={fadeInUp}>
-              Your support has been instrumental in making Hoyo Buddy what it is today.
+              {dict.supporters.description}
             </motion.p>
 
             <motion.div className="text-center mt-8" variants={fadeInUp}>
@@ -422,7 +433,7 @@ export default function HoyoBuddyAnniversary() {
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
                 onClick={() => window.open("https://github.com/seriaati#support-my-work", "_blank")}
               >
-                Support Us
+                {dict.supporters.button}
               </Button>
             </motion.div>
           </motion.div>
@@ -441,29 +452,29 @@ export default function HoyoBuddyAnniversary() {
               className="text-4xl md:text-5xl font-bold text-white text-center mb-16 tracking-tight"
               variants={fadeInUp}
             >
-              Thank You, Translators
+              {dict.translators.title}
             </motion.h2>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-4">
-              <PersonCard name="Ayase" role="Indonesian" avatar="/avatars/ayase_meguri.png" />
-              <PersonCard name="Chara Animates" role="Vietnamese" avatar="/avatars/charaanimates.png" />
-              <PersonCard name="Dinnerbone_3rd" role="Chinese (Simplified)" avatar="/avatars/db3_lost_mind.png" />
-              <PersonCard name="Ditroit" role="Spanish" avatar="/avatars/ditroit.png" />
-              <PersonCard name="Aya Saku" role="Chinese (Traditional)" avatar="/avatars/ayasaku_.png" />
-              <PersonCard name="Lucas" role="French" avatar="/avatars/nemboi.png" />
-              <PersonCard name="Eden" role="Dutch" avatar="/avatars/perfectdelusions.png" />
-              <PersonCard name="kakakaaa" role="Japanese" avatar="/avatars/ka.kaka.png" />
-              <PersonCard name="Trollerr" role="Vietnamese" avatar="/avatars/trollerr.png" />
-              <PersonCard name="Fuji" role="Indonesian" avatar="/avatars/monoceruse.png" />
-              <PersonCard name="DarkAngel" role="Arabic" avatar="/avatars/q3yb.png" />
-              <PersonCard name="DarkAssassin" role="Russian" avatar="/avatars/darkassassin.png" />
-              <PersonCard name="ニャオハ" role="French" avatar="/avatars/c330x.png" />
-              <PersonCard name="Ginn" role="Chinese (Traditional)" avatar="/avatars/g1nn.png" />
-              <PersonCard name="Anubhav" role="Hindi" avatar="/avatars/anubhav.png" />
+              <PersonCard name="Ayase" role={dict.translators.languages.indonesian} avatar="/avatars/ayase_meguri.png" />
+              <PersonCard name="Chara Animates" role={dict.translators.languages.vietnamese} avatar="/avatars/charaanimates.png" />
+              <PersonCard name="Dinnerbone_3rd" role={dict.translators.languages.chinese_simplified} avatar="/avatars/db3_lost_mind.png" />
+              <PersonCard name="Ditroit" role={dict.translators.languages.spanish} avatar="/avatars/ditroit.png" />
+              <PersonCard name="Aya Saku" role={dict.translators.languages.chinese_traditional} avatar="/avatars/ayasaku_.png" />
+              <PersonCard name="Lucas" role={dict.translators.languages.french} avatar="/avatars/nemboi.png" />
+              <PersonCard name="Eden" role={dict.translators.languages.dutch} avatar="/avatars/perfectdelusions.png" />
+              <PersonCard name="kakakaaa" role={dict.translators.languages.japanese} avatar="/avatars/ka.kaka.png" />
+              <PersonCard name="Trollerr" role={dict.translators.languages.vietnamese} avatar="/avatars/trollerr.png" />
+              <PersonCard name="Fuji" role={dict.translators.languages.indonesian} avatar="/avatars/monoceruse.png" />
+              <PersonCard name="DarkAngel" role={dict.translators.languages.arabic} avatar="/avatars/q3yb.png" />
+              <PersonCard name="DarkAssassin" role={dict.translators.languages.russian} avatar="/avatars/darkassassin.png" />
+              <PersonCard name="ニャオハ" role={dict.translators.languages.french} avatar="/avatars/c330x.png" />
+              <PersonCard name="Ginn" role={dict.translators.languages.chinese_traditional} avatar="/avatars/g1nn.png" />
+              <PersonCard name="Anubhav" role={dict.translators.languages.hindi} avatar="/avatars/anubhav.png" />
             </div>
 
             <motion.p className="text-center text-zinc-300 mt-12 text-lg leading-relaxed" variants={fadeInUp}>
-              Thanks to your dedication, Hoyo Buddy speaks multiple languages and serves a global community.
+              {dict.translators.description}
             </motion.p>
 
             <motion.div className="text-center mt-8" variants={fadeInUp}>
@@ -472,7 +483,7 @@ export default function HoyoBuddyAnniversary() {
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
                 onClick={() => window.open("https://github.com/seriaati/hoyo-buddy/blob/main/CONTRIBUTING.md", "_blank")}
               >
-                Become a Translator
+                {dict.translators.button}
               </Button>
             </motion.div>
           </motion.div>
@@ -492,16 +503,15 @@ export default function HoyoBuddyAnniversary() {
             </motion.div>
 
             <motion.h2 className="text-4xl md:text-5xl font-bold text-white mb-8 tracking-tight" variants={fadeInUp}>
-              Thank You
+              {dict.thanks.title}
             </motion.h2>
 
             <motion.p className="text-2xl text-zinc-300 mb-8 leading-relaxed" variants={fadeInUp}>
-              Most importantly, thank you for being part of the Hoyo Buddy family. Whether you're a daily user, a casual
-              visitor, or someone discovering us for the first time - you make this community special.
+              {dict.thanks.message}
             </motion.p>
 
             <motion.p className="text-xl text-zinc-400 mb-12 leading-relaxed" variants={fadeInUp}>
-              Here's to many more adventures together in the worlds of Hoyoverse! 🎮✨
+              {dict.thanks.closing}
             </motion.p>
           </motion.div>
         </section>
@@ -520,11 +530,11 @@ export default function HoyoBuddyAnniversary() {
             </motion.div>
 
             <motion.h2 className="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight" variants={fadeInUp}>
-              Anniversary Giveaway
+              {dict.giveaway.title}
             </motion.h2>
 
             <motion.p className="text-xl text-zinc-300 mb-8 max-w-2xl mx-auto leading-relaxed" variants={fadeInUp}>
-              Join our special anniversary celebration! We're giving away monthly passes.
+              {dict.giveaway.description}
             </motion.p>
 
             <motion.div variants={fadeInUp}>
@@ -533,7 +543,7 @@ export default function HoyoBuddyAnniversary() {
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
                 onClick={() => window.open("https://link.seria.moe/hb-dc", "_blank")}
               >
-                Join Discord Server & Enter Giveaway
+                {dict.giveaway.button}
               </Button>
             </motion.div>
           </motion.div>
@@ -542,7 +552,7 @@ export default function HoyoBuddyAnniversary() {
         {/* Footer */}
         <footer className="py-12 px-4 border-t border-zinc-800/50 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-zinc-500">© 2025 Seria Ati. All rights reserved.</p>
+            <p className="text-zinc-500">{dict.footer.copyright}</p>
           </div>
         </footer>
       </div>

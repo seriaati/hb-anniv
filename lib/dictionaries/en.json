@@ -1,0 +1,71 @@
+{
+  "hero": {
+    "title": "One Year",
+    "subtitle": "Celebrating one incredible year of Hoyo Buddy - the best Discord bot for Hoyoverse gamers.",
+    "badge": "🎉 Anniversary Special"
+  },
+  "stats": {
+    "title": "By the Numbers",
+    "commands": "Commands/Day",
+    "servers": "Servers", 
+    "users": "Users",
+    "stars": "GitHub Stars",
+    "updates": "Updates",
+    "accounts": "Linked Accounts"
+  },
+  "timeline": {
+    "title": "Our Journey",
+    "events": {
+      "project_started": "Project started",
+      "first_release": "First official release",
+      "reached_3000": "Reached 3,000 servers",
+      "reached_6000": "Reached 6,000 servers", 
+      "anniversary": "Reached 8,293 servers - One Year Anniversary!"
+    }
+  },
+  "team": {
+    "title": "Thank You, Team Members",
+    "roles": {
+      "developer": "Developer",
+      "designer": "Designer", 
+      "pr": "PR",
+      "documentation": "Documentation"
+    }
+  },
+  "supporters": {
+    "title": "Thank You, Supporters",
+    "description": "Your support has been instrumental in making Hoyo Buddy what it is today.",
+    "button": "Support Us"
+  },
+  "translators": {
+    "title": "Thank You, Translators",
+    "description": "Thanks to your dedication, Hoyo Buddy speaks multiple languages and serves a global community.",
+    "button": "Become a Translator",
+    "languages": {
+      "indonesian": "Indonesian",
+      "vietnamese": "Vietnamese",
+      "chinese_simplified": "Chinese (Simplified)",
+      "spanish": "Spanish",
+      "chinese_traditional": "Chinese (Traditional)",
+      "french": "French",
+      "dutch": "Dutch", 
+      "japanese": "Japanese",
+      "arabic": "Arabic",
+      "russian": "Russian",
+      "hindi": "Hindi"
+    }
+  },
+  "thanks": {
+    "title": "Thank You",
+    "message": "Most importantly, thank you for being part of the Hoyo Buddy family. Whether you're a daily user, a casual visitor, or someone discovering us for the first time - you make this community special.",
+    "closing": "Here's to many more adventures together in the worlds of Hoyoverse! 🎮✨"
+  },
+  "giveaway": {
+    "title": "Anniversary Giveaway",
+    "description": "Join our special anniversary celebration! We're giving away monthly passes.",
+    "button": "Join Discord Server & Enter Giveaway"
+  },
+  "footer": {
+    "copyright": "© 2025 Seria Ati. All rights reserved."
+  }
+}
