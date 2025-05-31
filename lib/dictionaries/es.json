@@ -23,11 +23,11 @@
       "anniversary": "Alcanzamos los 8,293 servidores - ¡Primer Aniversario!"
     },
     "times": {
-      "project_started": "October 23, 2023",
-      "first_release": "June 7, 2024",
-      "reached_3000": "November 23, 2024",
-      "reached_6000": "February 12, 2025",
-      "anniversary": "June 7, 2025"
+      "project_started": "23 de Octubre de 2023",
+      "first_release": "7 de Junio de 2024",
+      "reached_3000": "23 de Noviembre de 2024",
+      "reached_6000": "12 de Febrero de 2025",
+      "anniversary": "7 de Junio de 2025"
     }
   },
   "team": {
@@ -35,7 +35,7 @@
     "roles": {
       "developer": "Desarrollador",
       "designer": "Diseñador",
-      "pr": "PR",
+      "pr": "RP",
       "documentation": "Documentación"
     }
   },
