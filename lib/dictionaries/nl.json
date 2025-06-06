@@ -18,9 +18,9 @@
     "events": {
       "project_started": "Project gestart",
       "first_release": "Eerste officiële release",
-      "reached_3000": "Bereikte 3,000 servers",
-      "reached_6000": "Bereikte 6,000 servers",
-      "anniversary": "Bereikte 8.293 servers - Eenjarig Jubileum!"
+      "reached_3000": "Bereikte {} servers",
+      "reached_6000": "Bereikte {} servers",
+      "anniversary": "Bereikte {} servers - Eenjarig Jubileum!"
     },
     "times": {
       "project_started": "Oktober 23, 2023",

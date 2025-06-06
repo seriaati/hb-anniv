@@ -18,9 +18,9 @@
     "events": {
       "project_started": "Bắt đầu dự án",
       "first_release": "Lần đầu ra mắt chính thức",
-      "reached_3000": "Bot đã được thêm vào 3.000 máy chủ",
-      "reached_6000": "Bot đã được thêm vào 6.000 máy chủ",
-      "anniversary": "Bot đã được thêm vào 8.299 máy chủ - Sinh nhật một tuổi!"
+      "reached_3000": "Bot đã được thêm vào {} máy chủ",
+      "reached_6000": "Bot đã được thêm vào {} máy chủ",
+      "anniversary": "Bot đã được thêm vào {} máy chủ - Sinh nhật một tuổi!"
     },
     "times": {
       "project_started": "23/10/2023",

@@ -18,9 +18,9 @@
     "events": {
       "project_started": "專案啟動",
       "first_release": "首次正式發布",
-      "reached_3000": "達到 3,000 個伺服器",
-      "reached_6000": "達到 6,000 個伺服器",
-      "anniversary": "達到 8,293 個伺服器 - 一周年！"
+      "reached_3000": "達到 {} 個伺服器",
+      "reached_6000": "達到 {} 個伺服器",
+      "anniversary": "達到 {} 個伺服器 - 一周年！"
     },
     "times": {
       "project_started": "2023年10月23日",

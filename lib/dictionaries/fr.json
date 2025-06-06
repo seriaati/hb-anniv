@@ -18,9 +18,9 @@
     "events": {
       "project_started": "Projet lancé",
       "first_release": "Première version officielle",
-      "reached_3000": "3 000 serveurs atteints",
-      "reached_6000": "6 000 serveurs atteints",
-      "anniversary": "8 293 serveurs atteints - Premier Anniversaire !"
+      "reached_3000": "{} serveurs atteints",
+      "reached_6000": "{} serveurs atteints",
+      "anniversary": "{} serveurs atteints - Premier Anniversaire !"
     },
     "times": {
       "project_started": "23 octobre 2023",

@@ -18,9 +18,9 @@
     "events": {
       "project_started": "プロジェクト開始",
       "first_release": "初回正式リリース",
-      "reached_3000": "3,000サーバー達成",
-      "reached_6000": "6,000サーバー達成",
-      "anniversary": "8,293サーバー達成 - 1周年記念！"
+      "reached_3000": "{}サーバー達成",
+      "reached_6000": "{}サーバー達成",
+      "anniversary": "{}サーバー達成 - 1周年記念！"
     },
     "times": {
       "project_started": "2023年10月23日",

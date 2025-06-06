@@ -10,6 +10,10 @@ import { Badge } from "@/components/ui/badge"
 import { Users, Zap, Server, Star, RefreshCw, Link, Gift, Heart } from "lucide-react"
 import Image from "next/image"
 
+const THREE_K_SERVERS = 3000;
+const SIX_K_SERVERS = 6000;
+const ANNIVERSARY_SERVERS = 8514;
+
 // Consistent animation variants
 const fadeInUp = {
   initial: { opacity: 0, y: 40 },
@@ -260,11 +264,11 @@ export default function HoyoBuddyAnniversary({
 
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
               <StatCard icon={Zap} label={dict.stats.commands} value={1598} />
-              <StatCard icon={Server} label={dict.stats.servers} value={8293} />
-              <StatCard icon={Users} label={dict.stats.users} value={19252} />
-              <StatCard icon={Star} label={dict.stats.stars} value={124} />
-              <StatCard icon={RefreshCw} label={dict.stats.updates} value={3247} />
-              <StatCard icon={Link} label={dict.stats.accounts} value={33316} />
+              <StatCard icon={Server} label={dict.stats.servers} value={ANNIVERSARY_SERVERS} />
+              <StatCard icon={Users} label={dict.stats.users} value={19820} />
+              <StatCard icon={Star} label={dict.stats.stars} value={126} />
+              <StatCard icon={RefreshCw} label={dict.stats.updates} value={3261} />
+              <StatCard icon={Link} label={dict.stats.accounts} value={34259} />
             </div>
           </motion.div>
         </section>
@@ -288,9 +292,9 @@ export default function HoyoBuddyAnniversary({
             <div className="max-w-2xl mx-auto">
               <TimelineItem date={dict.timeline.times.project_started} event={dict.timeline.events.project_started} />
               <TimelineItem date={dict.timeline.times.first_release} event={dict.timeline.events.first_release} />
-              <TimelineItem date={dict.timeline.times.reached_3000} event={dict.timeline.events.reached_3000} />
-              <TimelineItem date={dict.timeline.times.reached_6000} event={dict.timeline.events.reached_6000} />
-              <TimelineItem date={dict.timeline.times.anniversary} event={dict.timeline.events.anniversary} isLast={true} />
+              <TimelineItem date={dict.timeline.times.reached_3000} event={dict.timeline.events.reached_3000.replace('{}', THREE_K_SERVERS.toLocaleString())} />
+              <TimelineItem date={dict.timeline.times.reached_6000} event={dict.timeline.events.reached_6000.replace('{}', SIX_K_SERVERS.toLocaleString())} />
+              <TimelineItem date={dict.timeline.times.anniversary} event={dict.timeline.events.anniversary.replace('{}', ANNIVERSARY_SERVERS.toLocaleString())} isLast={true} />
             </div>
           </motion.div>
         </section>
