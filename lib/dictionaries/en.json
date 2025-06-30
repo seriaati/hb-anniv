@@ -82,17 +82,17 @@
     "gettingStarted": {
       "title": "Getting Started",
       "addAccount": {
-        "title": "Add Your Account",
-        "description": "Connect your Hoyoverse accounts to unlock personalized features and track your game progress.",
+        "title": "Add your accounts",
+        "description": "Connect your Hoyoverse accounts to unlock auto daily check-in and auto code redeem.",
         "command": "/accounts"
       },
       "generateCards": {
-        "title": "Generate Character Cards",
-        "description": "Create beautiful character build cards to showcase your builds and share with friends.",
+        "title": "Generate character cards",
+        "description": "Create beautiful character build cards to showcase your builds.",
         "command": "/profile"
       },
       "settings": {
-        "title": "Customize Your Settings",
+        "title": "Customize your settings",
         "description": "Personalize your Hoyo Buddy experience with custom settings and preferences.",
         "command": "/settings"
       }
