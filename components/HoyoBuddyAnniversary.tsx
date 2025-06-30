@@ -94,6 +94,10 @@ function StatCard({
 }
 
 function PersonCard({ name, role, avatar }: { name: string; role: string; avatar: string }) {
+  // Check if avatar is animated (GIF or animated PNG)
+  const isAnimated = avatar?.includes('.gif') || 
+    ['bunny.gg.png', 'syaorandesu.png', 'wocardo.png'].some(file => avatar?.includes(file))
+  
   return (
     <motion.div variants={fadeInUp}>
       <Card className="bg-zinc-900/40 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700/70 transition-all duration-300 group">
@@ -105,8 +109,9 @@ function PersonCard({ name, role, avatar }: { name: string; role: string; avatar
                 alt={name}
                 width={64}
                 height={64}
-                placeholder="blur"
-                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                unoptimized={isAnimated}
+                placeholder={isAnimated ? "empty" : "blur"}
+                blurDataURL={isAnimated ? undefined : "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="}
                 sizes="64px"
                 className="w-full h-full object-cover"
               />
@@ -144,12 +149,10 @@ export default function HoyoBuddyAnniversary({
 }) {
   const { scrollYProgress } = useScroll()
   
-  // Memoize transforms for performance
-  const meshTransforms = useMemo(() => ({
-    meshY1: useTransform(scrollYProgress, [0, 1], [0, 100]),
-    meshY2: useTransform(scrollYProgress, [0, 1], [0, -75]),
-    meshY3: useTransform(scrollYProgress, [0, 1], [0, 50]),
-  }), [scrollYProgress])
+  // Create transforms at component level (not in useMemo)
+  const meshY1 = useTransform(scrollYProgress, [0, 1], [0, 100])
+  const meshY2 = useTransform(scrollYProgress, [0, 1], [0, -75])  
+  const meshY3 = useTransform(scrollYProgress, [0, 1], [0, 50])
 
   // Reference for scroll-based animations
   const heroRef = useRef(null)
@@ -173,7 +176,7 @@ export default function HoyoBuddyAnniversary({
           <motion.div
             className="absolute -top-32 left-1/4 w-[40vw] h-[50vh] opacity-20"
             style={{
-              y: meshTransforms.meshY1,
+              y: meshY1,
               background: "radial-gradient(circle at center, rgba(236, 72, 153, 0.4) 0%, rgba(236, 72, 153, 0) 70%)",
               filter: "blur(40px)",
             }}
@@ -183,7 +186,7 @@ export default function HoyoBuddyAnniversary({
           <motion.div
             className="absolute top-1/2 -right-32 w-[35vw] h-[40vh] opacity-15"
             style={{
-              y: meshTransforms.meshY2,
+              y: meshY2,
               background: "radial-gradient(circle at center, rgba(147, 51, 234, 0.4) 0%, rgba(147, 51, 234, 0) 70%)",
               filter: "blur(40px)",
             }}
@@ -193,7 +196,7 @@ export default function HoyoBuddyAnniversary({
           <motion.div
             className="absolute bottom-1/4 left-1/3 w-[30vw] h-[35vh] opacity-10"
             style={{
-              y: meshTransforms.meshY3,
+              y: meshY3,
               background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0) 70%)",
               filter: "blur(40px)",
             }}
