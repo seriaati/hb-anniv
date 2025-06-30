@@ -74,5 +74,32 @@
   },
   "footer": {
     "copyright": "© 2025 Seria Ati. 版权所有。"
+  },
+  "thankYou": {
+    "badge": "Scroll down to get started",
+    "title": "Thank You",
+    "description": "Thanks for adding Hoyo Buddy, and welcome to an elevated Hoyoverse experience.",
+    "gettingStarted": {
+      "title": "Getting Started",
+      "addAccount": {
+        "title": "Add Your Account",
+        "description": "Connect your Hoyoverse accounts to unlock personalized features and track your game progress.",
+        "command": "/accounts"
+      },
+      "generateCards": {
+        "title": "Generate Character Cards",
+        "description": "Create beautiful character build cards to showcase your builds and share with friends.",
+        "command": "/profile"
+      },
+      "settings": {
+        "title": "Customize Your Settings",
+        "description": "Personalize your Hoyo Buddy experience with custom settings and preferences.",
+        "command": "/settings"
+      }
+    },
+    "buttons": {
+      "documentation": "Documentation",
+      "featureList": "Feature List"
+    }
   }
 }
