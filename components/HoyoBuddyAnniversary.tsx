@@ -2,8 +2,8 @@
 
 import LanguageSwitcher from './LanguageSwitcher'
 import { Dictionary, Locale } from '@/lib/i18n'
-import { useEffect, useRef } from "react"
-import { motion, useInView, useScroll, useTransform } from "framer-motion"
+import { useEffect, useRef, useMemo } from "react"
+import { motion, useInView, useScroll, useTransform, LazyMotion, domAnimation } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -14,23 +14,23 @@ const THREE_K_SERVERS = 3000;
 const SIX_K_SERVERS = 6000;
 const ANNIVERSARY_SERVERS = 8514;
 
-// Consistent animation variants
+// Optimized animation variants
 const fadeInUp = {
-  initial: { opacity: 0, y: 40 },
+  initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, ease: "easeOut" },
+  transition: { duration: 0.5, ease: "easeOut" },
 }
 
 const fadeIn = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
-  transition: { duration: 0.7, ease: "easeOut" },
+  transition: { duration: 0.5, ease: "easeOut" },
 }
 
 const staggerContainer = {
   animate: {
     transition: {
-      staggerChildren: 0.1,
+      staggerChildren: 0.05,
     },
   },
 }
@@ -105,6 +105,9 @@ function PersonCard({ name, role, avatar }: { name: string; role: string; avatar
                 alt={name}
                 width={64}
                 height={64}
+                placeholder="blur"
+                blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                sizes="64px"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -140,9 +143,13 @@ export default function HoyoBuddyAnniversary({
   locale: Locale
 }) {
   const { scrollYProgress } = useScroll()
-  const meshY1 = useTransform(scrollYProgress, [0, 1], [0, 200])
-  const meshY2 = useTransform(scrollYProgress, [0, 1], [0, -150])
-  const meshY3 = useTransform(scrollYProgress, [0, 1], [0, 100])
+  
+  // Memoize transforms for performance
+  const meshTransforms = useMemo(() => ({
+    meshY1: useTransform(scrollYProgress, [0, 1], [0, 100]),
+    meshY2: useTransform(scrollYProgress, [0, 1], [0, -75]),
+    meshY3: useTransform(scrollYProgress, [0, 1], [0, 50]),
+  }), [scrollYProgress])
 
   // Reference for scroll-based animations
   const heroRef = useRef(null)
@@ -155,42 +162,43 @@ export default function HoyoBuddyAnniversary({
   const giveawayRef = useRef(null)
 
   return (
-    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
-      <div className="fixed top-4 right-4 z-50">
-        <LanguageSwitcher currentLocale={locale} />
-      </div>
-      {/* Colorful background gradients */}
-      <div className="fixed inset-0 pointer-events-none overflow-hidden">
-        {/* Pink blob */}
-        <motion.div
-          className="absolute -top-32 left-1/4 w-[50vw] h-[60vh] opacity-30"
-          style={{
-            y: meshY1,
-            background: "radial-gradient(circle at center, rgba(236, 72, 153, 0.6) 0%, rgba(236, 72, 153, 0) 70%)",
-            filter: "blur(60px)",
-          }}
-        />
+    <LazyMotion features={domAnimation}>
+      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
+        <div className="fixed top-4 right-4 z-50">
+          <LanguageSwitcher currentLocale={locale} />
+        </div>
+        {/* Optimized background gradients */}
+        <div className="fixed inset-0 pointer-events-none overflow-hidden">
+          {/* Pink blob */}
+          <motion.div
+            className="absolute -top-32 left-1/4 w-[40vw] h-[50vh] opacity-20"
+            style={{
+              y: meshTransforms.meshY1,
+              background: "radial-gradient(circle at center, rgba(236, 72, 153, 0.4) 0%, rgba(236, 72, 153, 0) 70%)",
+              filter: "blur(40px)",
+            }}
+          />
 
-        {/* Purple blob */}
-        <motion.div
-          className="absolute top-1/2 -right-32 w-[45vw] h-[50vh] opacity-25"
-          style={{
-            y: meshY2,
-            background: "radial-gradient(circle at center, rgba(147, 51, 234, 0.6) 0%, rgba(147, 51, 234, 0) 70%)",
-            filter: "blur(60px)",
-          }}
-        />
+          {/* Purple blob */}
+          <motion.div
+            className="absolute top-1/2 -right-32 w-[35vw] h-[40vh] opacity-15"
+            style={{
+              y: meshTransforms.meshY2,
+              background: "radial-gradient(circle at center, rgba(147, 51, 234, 0.4) 0%, rgba(147, 51, 234, 0) 70%)",
+              filter: "blur(40px)",
+            }}
+          />
 
-        {/* Blue blob */}
-        <motion.div
-          className="absolute bottom-1/4 left-1/3 w-[40vw] h-[45vh] opacity-20"
-          style={{
-            y: meshY3,
-            background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.6) 0%, rgba(59, 130, 246, 0) 70%)",
-            filter: "blur(60px)",
-          }}
-        />
-      </div>
+          {/* Blue blob */}
+          <motion.div
+            className="absolute bottom-1/4 left-1/3 w-[30vw] h-[35vh] opacity-10"
+            style={{
+              y: meshTransforms.meshY3,
+              background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0) 70%)",
+              filter: "blur(40px)",
+            }}
+          />
+        </div>
 
       {/* Frosted glass container */}
       <div className="relative z-10 min-h-screen backdrop-blur-[60px] bg-zinc-900/20">
@@ -213,6 +221,7 @@ export default function HoyoBuddyAnniversary({
                 alt="Hoyo Buddy Logo"
                 width={120}
                 height={120}
+                priority
                 className="mx-auto mb-6 relative z-10"
               />
             </motion.div>
@@ -326,6 +335,9 @@ export default function HoyoBuddyAnniversary({
                           alt="seria"
                           width={64}
                           height={64}
+                          placeholder="blur"
+                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                          sizes="64px"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -346,6 +358,9 @@ export default function HoyoBuddyAnniversary({
                           alt="ayasaku_"
                           width={64}
                           height={64}
+                          placeholder="blur"
+                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                          sizes="64px"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -366,6 +381,9 @@ export default function HoyoBuddyAnniversary({
                           alt="hydrogened"
                           width={64}
                           height={64}
+                          placeholder="blur"
+                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                          sizes="64px"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -386,6 +404,9 @@ export default function HoyoBuddyAnniversary({
                           alt="charraanimates"
                           width={64}
                           height={64}
+                          placeholder="blur"
+                          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkbHB0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+                          sizes="64px"
                           className="w-full h-full object-cover"
                         />
                       </div>
@@ -561,5 +582,6 @@ export default function HoyoBuddyAnniversary({
         </footer>
       </div>
     </div>
+    </LazyMotion>
   )
 }
