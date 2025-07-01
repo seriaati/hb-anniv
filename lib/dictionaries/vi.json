@@ -101,5 +101,11 @@
       "documentation": "Documentation",
       "featureList": "Feature List"
     }
+  },
+  "installPage": {
+    "title": "Install Hoyo Buddy",
+    "description": "Let everyone in the server use it, or be able to use the app everywhere!",
+    "addToServer": "Add to server",
+    "addToApps": "Add to my apps"
   }
 }
