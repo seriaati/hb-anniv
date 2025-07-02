@@ -125,23 +125,29 @@ export default function InstallPage({ dict, locale }: InstallPageProps) {
                 variants={fadeInUp}
                 className="flex flex-col sm:flex-row gap-6 justify-center items-center"
               >
-                <Button
-                  onClick={handleAddToServer}
-                  size="lg"
-                  className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  <PlusCircle className="w-5 h-5 mr-2" />
-                  {dict.installPage.addToServer}
-                </Button>
+                <div className="flex flex-col items-center">
+                  <Button
+                    onClick={handleAddToServer}
+                    size="lg"
+                    className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                  >
+                    <PlusCircle className="w-5 h-5 mr-2" />
+                    {dict.installPage.addToServer}
+                  </Button>
+                  <p className="text-sm text-zinc-400 mt-2">{dict.installPage.addToServerSubtitle}</p>
+                </div>
                 
-                <Button
-                  onClick={handleAddToApps}
-                  size="lg"
-                  className="px-8 py-4 bg-zinc-800/70 hover:bg-zinc-700/80 border border-zinc-700/70 hover:border-zinc-600/70 text-white font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-                >
-                  <AppWindow className="w-5 h-5 mr-2" />
-                  {dict.installPage.addToApps}
-                </Button>
+                <div className="flex flex-col items-center">
+                  <Button
+                    onClick={handleAddToApps}
+                    size="lg"
+                    className="px-8 py-4 bg-zinc-800/70 hover:bg-zinc-700/80 border border-zinc-700/70 hover:border-zinc-600/70 text-white font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                  >
+                    <AppWindow className="w-5 h-5 mr-2" />
+                    {dict.installPage.addToApps}
+                  </Button>
+                  <p className="text-sm text-zinc-400 mt-2">{dict.installPage.addToAppsSubtitle}</p>
+                </div>
               </motion.div>
             </motion.div>
           </motion.div>
