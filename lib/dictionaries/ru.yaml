@@ -76,35 +76,35 @@
     "copyright": "© 2025 Seria Ati. Все права защищены."
   },
   "thankYou": {
-    "badge": "",
-    "title": "",
-    "description": "",
+    "badge": "Scroll down to get started",
+    "title": "Thank You",
+    "description": "Thanks for adding Hoyo Buddy, and welcome to an elevated Hoyoverse experience.",
     "gettingStarted": {
-      "title": "",
+      "title": "Getting Started",
       "addAccount": {
-        "title": "",
-        "description": ""
+        "title": "Add Your Account",
+        "description": "Connect your Hoyoverse accounts to unlock personalized features and track your game progress."
       },
       "generateCards": {
-        "title": "",
-        "description": ""
+        "title": "Generate Character Cards",
+        "description": "Create beautiful character build cards to showcase your builds and share with friends."
       },
       "settings": {
-        "title": "",
-        "description": ""
+        "title": "Customize Your Settings",
+        "description": "Personalize your Hoyo Buddy experience with custom settings and preferences."
       }
     },
     "buttons": {
-      "documentation": "",
-      "featureList": ""
+      "documentation": "Documentation",
+      "featureList": "Feature List"
     }
   },
   "installPage": {
-    "title": "",
-    "description": "",
-    "addToServer": "",
-    "addToServerSubtitle": "",
-    "addToApps": "",
-    "addToAppsSubtitle": ""
+    "title": "Install Hoyo Buddy",
+    "description": "A feature-rich Discord bot to elevate your Hoyoverse experience",
+    "addToServer": "Add to server",
+    "addToServerSubtitle": "Let everyone use it",
+    "addToApps": "Add to my apps",
+    "addToAppsSubtitle": "Use it anywhere"
   }
 }
