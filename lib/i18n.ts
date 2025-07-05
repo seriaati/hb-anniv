@@ -6,16 +6,16 @@ export type Locale = typeof locales[number]
 const dictionaryCache = new Map<Locale, any>()
 
 const dictionaries = {
-    en: () => import('./dictionaries/en.json').then(m => m.default),
-    'zh-TW': () => import('./dictionaries/zh-TW.json').then(m => m.default),
-    'zh-CN': () => import('./dictionaries/zh-CN.json').then(m => m.default),
-    es: () => import('./dictionaries/es.json').then(m => m.default),
-    nl: () => import('./dictionaries/nl.json').then(m => m.default),
-    vi: () => import('./dictionaries/vi.json').then(m => m.default),
-    ru: () => import('./dictionaries/ru.json').then(m => m.default),
-    ja: () => import('./dictionaries/ja.json').then(m => m.default),
-    pt: () => import('./dictionaries/pt.json').then(m => m.default),
-    fr: () => import('./dictionaries/fr.json').then(m => m.default),
+    en: () => import('./dictionaries/en.yaml').then(m => m.default),
+    'zh-TW': () => import('./dictionaries/zh-TW.yaml').then(m => m.default),
+    'zh-CN': () => import('./dictionaries/zh-CN.yaml').then(m => m.default),
+    es: () => import('./dictionaries/es.yaml').then(m => m.default),
+    nl: () => import('./dictionaries/nl.yaml').then(m => m.default),
+    vi: () => import('./dictionaries/vi.yaml').then(m => m.default),
+    ru: () => import('./dictionaries/ru.yaml').then(m => m.default),
+    ja: () => import('./dictionaries/ja.yaml').then(m => m.default),
+    pt: () => import('./dictionaries/pt.yaml').then(m => m.default),
+    fr: () => import('./dictionaries/fr.yaml').then(m => m.default),
 }
 
 export const getDictionary = async (locale: Locale) => {
