@@ -2,7 +2,7 @@
   "hero": {
     "title": "一周年",
     "subtitle": "慶祝 Hoyo Buddy 一周年 —— 這是為 Hoyoverse 玩家打造的最好用的 Discord 機器人。",
-    "badge": "🎉 週年慶特典"
+    "badge": "\U0001F389 週年慶特典"
   },
   "stats": {
     "title": "數據統計",
@@ -65,7 +65,7 @@
   "thanks": {
     "title": "謝謝你",
     "message": "最重要的是，感謝你成為 Hoyo Buddy 大家庭的一員。無論你是每日使用者、偶爾造訪的訪客，或是第一次發現我們的人 —— 你讓這個社群變得特別。",
-    "closing": "讓我們在 Hoyoverse 的世界中一起享受更多冒險！🎮✨"
+    "closing": "讓我們在 Hoyoverse 的世界中一起享受更多冒險！\U0001F3AE✨"
   },
   "giveaway": {
     "title": "週年慶抽獎",
