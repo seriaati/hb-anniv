@@ -2,7 +2,7 @@
   "hero": {
     "title": "Un Año",
     "subtitle": "Celebrando un año increíble de Hoyo Buddy - el mejor bot de Discord para los jugadores de Hoyoverse.",
-    "badge": "🎉 Especial de Aniversario"
+    "badge": "\U0001F389 Especial de Aniversario"
   },
   "stats": {
     "title": "Por las cifras",
@@ -65,7 +65,7 @@
   "thanks": {
     "title": "Gracias",
     "message": "Lo más importante, gracias por ser parte de la familia Hoyo Buddy. Ya seas un usuario diario, un visitante casual o alguien que nos descubre por primera vez, tú haces especial a esta comunidad.",
-    "closing": "¡Por muchas más aventuras juntos en los mundos de Hoyoverse! 🎮✨"
+    "closing": "¡Por muchas más aventuras juntos en los mundos de Hoyoverse! \U0001F3AE✨"
   },
   "giveaway": {
     "title": "Sorteo de Aniversario",
