@@ -83,18 +83,15 @@
       "title": "Getting Started",
       "addAccount": {
         "title": "Add your accounts",
-        "description": "Connect your Hoyoverse accounts to unlock auto daily check-in and auto code redeem.",
-        "command": "/accounts"
+        "description": "Connect your Hoyoverse accounts to unlock auto daily check-in and auto code redeem."
       },
       "generateCards": {
         "title": "Generate character cards",
-        "description": "Create beautiful character build cards to showcase your builds.",
-        "command": "/profile"
+        "description": "Create beautiful character build cards to showcase your builds."
       },
       "settings": {
         "title": "Customize your settings",
-        "description": "Personalize your Hoyo Buddy experience with custom settings and preferences.",
-        "command": "/settings"
+        "description": "Personalize your Hoyo Buddy experience with custom settings and preferences."
       }
     },
     "buttons": {

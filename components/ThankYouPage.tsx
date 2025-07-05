@@ -182,7 +182,7 @@ export default function ThankYouPage({ dict, locale }: ThankYouPageProps) {
                           {dict.thankYou.gettingStarted.addAccount.description}
                         </p>
                         <code className="px-3 py-1 bg-zinc-800/50 rounded text-sm font-mono text-zinc-300">
-                          {dict.thankYou.gettingStarted.addAccount.command}
+                          /accounts
                         </code>
                       </div>
                     </div>
@@ -203,7 +203,7 @@ export default function ThankYouPage({ dict, locale }: ThankYouPageProps) {
                           {dict.thankYou.gettingStarted.generateCards.description}
                         </p>
                         <code className="px-3 py-1 bg-zinc-800/50 rounded text-sm font-mono text-zinc-300">
-                          {dict.thankYou.gettingStarted.generateCards.command}
+                          /profile
                         </code>
                       </div>
                     </div>
@@ -224,7 +224,7 @@ export default function ThankYouPage({ dict, locale }: ThankYouPageProps) {
                           {dict.thankYou.gettingStarted.settings.description}
                         </p>
                         <code className="px-3 py-1 bg-zinc-800/50 rounded text-sm font-mono text-zinc-300">
-                          {dict.thankYou.gettingStarted.settings.command}
+                          /settings
                         </code>
                       </div>
                     </div>
