@@ -8,3 +8,5 @@ settings:
   language_mapping:
     zh_CN: zh-CN
     zh_TW: zh-TW
+    pt_BR: pt
+    es_ES: es
