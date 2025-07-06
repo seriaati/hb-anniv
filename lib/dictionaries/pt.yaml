@@ -76,35 +76,35 @@
     "copyright": "© 2025 Seria Ati. Todos os direitos reservados."
   },
   "thankYou": {
-    "badge": "",
-    "title": "",
-    "description": "",
+    "badge": "Role para baixo para começar",
+    "title": "Obrigado",
+    "description": "Obrigado por adicionar o Hoyo Buddy e bem-vindo a uma experiência Hoyoverse elevada.",
     "gettingStarted": {
-      "title": "",
+      "title": "Primeiros Passos",
       "addAccount": {
-        "title": "",
-        "description": ""
+        "title": "Adicione suas contas",
+        "description": "Conecte suas contas da Hoyoverse para desbloquear o check-in diário automático e resgate automático de códigos."
       },
       "generateCards": {
-        "title": "",
-        "description": ""
+        "title": "Gere cards de personagens",
+        "description": "Crie lindos cards de personagens e equipes para mostrar suas builds."
       },
       "settings": {
-        "title": "",
-        "description": ""
+        "title": "Personalize suas configurações",
+        "description": "Altere as preferências de idioma, notificação e tema."
       }
     },
     "buttons": {
-      "documentation": "",
-      "featureList": ""
+      "documentation": "Documentação",
+      "featureList": "Lista de Recursos"
     }
   },
   "installPage": {
-    "title": "",
-    "description": "",
-    "addToServer": "",
-    "addToServerSubtitle": "",
-    "addToApps": "",
-    "addToAppsSubtitle": ""
+    "title": "Instalar Hoyo Buddy",
+    "description": "Um bot do Discord repleto de recursos para elevar sua experiência Hoyoverse",
+    "addToServer": "Adicionar ao Servidor",
+    "addToServerSubtitle": "Deixe todos usarem",
+    "addToApps": "Adicionar aos Meus Apps",
+    "addToAppsSubtitle": "Use em qualquer lugar"
   }
 }
