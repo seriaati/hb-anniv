@@ -76,35 +76,35 @@
     "copyright": "© 2025 Seria Ati. Bảo lưu mọi quyền."
   },
   "thankYou": {
-    "badge": "",
-    "title": "",
-    "description": "",
+    "badge": "Lướt xuống để bắt đầu",
+    "title": "Cảm ơn bạn",
+    "description": "Cảm ơn bạn vì đã tin dùng Hoyo Buddy, Giờ thì hãy sẵn sàng cho một trải nghiệm Hoyoverse đỉnh cao nào!",
     "gettingStarted": {
-      "title": "",
+      "title": "Bắt đầu sử dụng",
       "addAccount": {
-        "title": "",
-        "description": ""
+        "title": "Thêm tài khoản của bạn",
+        "description": "Kết nối tài khoản Hoyoverse của bạn để sử dụng tính năng tự động điểm danh hằng ngày và tự động đổi mã quà."
       },
       "generateCards": {
-        "title": "",
-        "description": ""
+        "title": "Tạo ảnh build nhân vật",
+        "description": "Đưa build nhân vật và đội hình của bạn vào những mẫu ảnh tuyệt đẹp."
       },
       "settings": {
-        "title": "",
-        "description": ""
+        "title": "Tùy chỉnh thiết lập của bạn",
+        "description": "Tùy chỉnh ngôn ngữ, thông báo và chủ đề theo ý thích của bản thân."
       }
     },
     "buttons": {
-      "documentation": "",
-      "featureList": ""
+      "documentation": "Tài liệu Wiki",
+      "featureList": "Danh sách tính năng"
     }
   },
   "installPage": {
-    "title": "",
-    "description": "",
-    "addToServer": "",
-    "addToServerSubtitle": "",
-    "addToApps": "",
-    "addToAppsSubtitle": ""
+    "title": "Thêm Hoyo Buddy",
+    "description": "Là một bot Discord nhầm nâng cao trải nghiệm Hoyoverse của bạn",
+    "addToServer": "Thêm vào Máy Chủ",
+    "addToServerSubtitle": "Cho mọi người cùng dùng",
+    "addToApps": "Thêm vào Ứng Dụng Của Tôi",
+    "addToAppsSubtitle": "Để dùng ở mọi nơi"
   }
 }
