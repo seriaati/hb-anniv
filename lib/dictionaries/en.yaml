@@ -87,11 +87,11 @@
       },
       "generateCards": {
         "title": "Generate character cards",
-        "description": "Create beautiful character build cards to showcase your builds."
+        "description": "Create beautiful character and team cards to show off your builds."
       },
       "settings": {
         "title": "Customize your settings",
-        "description": "Personalize your Hoyo Buddy experience with custom settings and preferences."
+        "description": "Change language, notification, and theme preferences."
       }
     },
     "buttons": {
