@@ -76,35 +76,35 @@
     "copyright": "© 2025 Seria Ati. Alle rechten voorbehouden."
   },
   "thankYou": {
-    "badge": "Scroll naar beneden om aan de slag te gaan",
-    "title": "Bedankt",
-    "description": "Bedankt voor het toevoegen van Hoyo Buddy, en welkom bij een verbeterde Hoyoverse ervaring.",
+    "badge": "",
+    "title": "",
+    "description": "",
     "gettingStarted": {
-      "title": "Om te beginnen",
+      "title": "",
       "addAccount": {
-        "title": "Voeg je accounts toe",
-        "description": "Verbind je Hoyoverse accounts om automatische dagelijkse check-ins en inwisselen van codes te activeren."
+        "title": "",
+        "description": ""
       },
       "generateCards": {
-        "title": "Genereer karakter kaarten",
-        "description": "Maak prachtige karakter build kaarten om je builds te laten zien"
+        "title": "",
+        "description": ""
       },
       "settings": {
-        "title": "Pas je instellingen aan",
-        "description": "Personaliseer je Hoyo Buddy ervaring met aangepaste instellingen en voorkeuren."
+        "title": "",
+        "description": ""
       }
     },
     "buttons": {
-      "documentation": "Documentatie",
-      "featureList": "Functielijst"
+      "documentation": "",
+      "featureList": ""
     }
   },
   "installPage": {
-    "title": "Installeer Hoyo Buddy",
-    "description": "Een feature-rijke Discord bot om je Hoyoverse ervaring naar een hoger niveau te tillen",
-    "addToServer": "Toevoegen aan server",
-    "addToServerSubtitle": "Laat iedereen er gebruik van maken",
-    "addToApps": "Voeg toe aan Mijn Apps",
-    "addToAppsSubtitle": "Gebruik het overal"
+    "title": "",
+    "description": "",
+    "addToServer": "",
+    "addToServerSubtitle": "",
+    "addToApps": "",
+    "addToAppsSubtitle": ""
   }
 }
