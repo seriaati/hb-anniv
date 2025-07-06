@@ -76,35 +76,35 @@
     "copyright": "© 2025 Seria Ati. 版权所有。"
   },
   "thankYou": {
-    "badge": "",
-    "title": "",
-    "description": "",
+    "badge": "下滑开始",
+    "title": "谢谢你",
+    "description": "感谢添加Hoyo Buddy，会让Hoyoverse体验更上一层楼。",
     "gettingStarted": {
-      "title": "",
+      "title": "开始",
       "addAccount": {
-        "title": "",
-        "description": ""
+        "title": "添加账户",
+        "description": "关联Hoyoverse账户，解锁每日自动签到和自动兑换兑换码功能。"
       },
       "generateCards": {
-        "title": "",
-        "description": ""
+        "title": "生成角色卡片",
+        "description": "创建优美的角色配置卡片来展示你的角色配置。"
       },
       "settings": {
-        "title": "",
-        "description": ""
+        "title": "自定义设置",
+        "description": "自定设置和外观，个性化Hoyo Buddy使用体验。"
       }
     },
     "buttons": {
-      "documentation": "",
-      "featureList": ""
+      "documentation": "文档",
+      "featureList": "功能列表"
     }
   },
   "installPage": {
-    "title": "",
-    "description": "",
-    "addToServer": "",
-    "addToServerSubtitle": "",
-    "addToApps": "",
-    "addToAppsSubtitle": ""
+    "title": "安装 Hoyo Buddy",
+    "description": "一款功能丰富的机器人，能让你的 Hoyoverse 体验更上一层楼",
+    "addToServer": "添加到服务器",
+    "addToServerSubtitle": "让每个人都用",
+    "addToApps": "添加到我的APP中",
+    "addToAppsSubtitle": "随时随地使用"
   }
 }
