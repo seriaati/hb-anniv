@@ -18,16 +18,44 @@ const dictionaries = {
     fr: () => import('./dictionaries/fr.yaml').then(m => m.default),
 }
 
+const deepMerge = (target: any, source: any): any => {
+    if (typeof target !== 'object' || target === null || typeof source !== 'object' || source === null) {
+        return source
+    }
+    
+    const result = { ...target }
+    
+    for (const key in source) {
+        if (source.hasOwnProperty(key)) {
+            if (typeof source[key] === 'object' && source[key] !== null && !Array.isArray(source[key])) {
+                result[key] = deepMerge(result[key] || {}, source[key])
+            } else if (source[key] !== '' && source[key] !== null && source[key] !== undefined) {
+                result[key] = source[key]
+            }
+        }
+    }
+    
+    return result
+}
+
 export const getDictionary = async (locale: Locale) => {
     // Return cached dictionary if available
     if (dictionaryCache.has(locale)) {
         return dictionaryCache.get(locale)
     }
     
-    // Load and cache dictionary
+    // Load dictionary
     const dict = await (dictionaries[locale]?.() ?? dictionaries.en())
-    dictionaryCache.set(locale, dict)
-    return dict
+    
+    // If not English, merge with English fallback for missing translations
+    let mergedDict = dict
+    if (locale !== 'en') {
+        const englishDict = await dictionaries.en()
+        mergedDict = deepMerge(englishDict, dict)
+    }
+    
+    dictionaryCache.set(locale, mergedDict)
+    return mergedDict
 }
 
 export type Dictionary = Awaited<ReturnType<typeof getDictionary>>
