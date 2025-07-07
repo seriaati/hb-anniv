@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'Hoyo Buddy',
     images: [
       {
-        url: 'https://one.hb.seria.moe/anniv-preview.png',
+        url: 'https://one.hb.seria.moe/preview-anniv.png',
       }
     ],
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Hoyo Buddy | 1st Year Anniversary',
     description: 'Join us in celebrating the 1st anniversary of Hoyo Buddy with special giveaways!',
-    images: 'https://one.hb.seria.moe/anniv-preview.png',
+    images: 'https://one.hb.seria.moe/preview-anniv.png',
   },
 }
 
