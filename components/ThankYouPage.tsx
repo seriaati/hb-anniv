@@ -48,7 +48,7 @@ export default function ThankYouPage({ dict, locale }: ThankYouPageProps) {
   }
 
   const handleOpenDocumentation = () => {
-    window.open('https://docs.hb.seria.moe/docs/Getting-Started', '_blank')
+    window.open('https://docs.hb.seria.moe/docs/', '_blank')
   }
 
   const scrollToGettingStarted = () => {
