@@ -76,35 +76,35 @@
     "copyright": "© 2025 Seria Ati. 無断転載禁止。"
   },
   "thankYou": {
-    "badge": "",
-    "title": "",
-    "description": "",
+    "badge": "下にスクロールして始めましょう",
+    "title": "ありがとうございます",
+    "description": "Hoyo Buddyを追加していただき、ありがとうございます。より良いHoyoverseエクスペリエンスへようこそ。",
     "gettingStarted": {
-      "title": "",
+      "title": "はじめに",
       "addAccount": {
-        "title": "",
-        "description": ""
+        "title": "アカウントを追加",
+        "description": "Hoyoverseアカウントを連携して、自動デイリーチェックインと自動コード交換を利用しましょう。"
       },
       "generateCards": {
-        "title": "",
-        "description": ""
+        "title": "キャラクターカードを生成",
+        "description": "美しいキャラクターカードやチームカードを作成して、あなたのビルドを披露しましょう。"
       },
       "settings": {
-        "title": "",
-        "description": ""
+        "title": "設定をカスタマイズ",
+        "description": "言語、通知、テーマの設定を変更できます。"
       }
     },
     "buttons": {
-      "documentation": "",
-      "featureList": ""
+      "documentation": "ドキュメント",
+      "featureList": "機能一覧"
     }
   },
   "installPage": {
-    "title": "",
-    "description": "",
-    "addToServer": "",
-    "addToServerSubtitle": "",
-    "addToApps": "",
-    "addToAppsSubtitle": ""
+    "title": "Hoyo Buddyをインストール",
+    "description": "Hoyoverseエクスペリエンスを向上させる多機能Discordボット",
+    "addToServer": "サーバーに追加",
+    "addToServerSubtitle": "みんなで使用",
+    "addToApps": "マイアプリに追加",
+    "addToAppsSubtitle": "どこでも使用"
   }
 }

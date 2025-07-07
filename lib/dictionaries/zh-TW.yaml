@@ -76,35 +76,35 @@
     "copyright": "© 2025 Seria Ati. 版權所有。"
   },
   "thankYou": {
-    "badge": "",
-    "title": "",
-    "description": "",
+    "badge": "下滑開始",
+    "title": "謝謝",
+    "description": "感謝新增 Hoyo Buddy，歡迎來到更上一層樓的 Hoyoverse 體驗。",
     "gettingStarted": {
-      "title": "",
+      "title": "開始使用",
       "addAccount": {
-        "title": "",
-        "description": ""
+        "title": "新增帳戶",
+        "description": "連結你的 Hoyoverse 帳戶並解鎖自動每日簽到和自動兌換兌換碼功能。"
       },
       "generateCards": {
-        "title": "",
-        "description": ""
+        "title": "生成角色卡片",
+        "description": "創建優美的角色和隊伍卡片來展示你的面板配置。"
       },
       "settings": {
-        "title": "",
-        "description": ""
+        "title": "自定義設置",
+        "description": "變更語言、通知及主題外觀。"
       }
     },
     "buttons": {
-      "documentation": "",
-      "featureList": ""
+      "documentation": "文檔",
+      "featureList": "功能列表"
     }
   },
   "installPage": {
-    "title": "",
-    "description": "",
-    "addToServer": "",
-    "addToServerSubtitle": "",
-    "addToApps": "",
-    "addToAppsSubtitle": ""
+    "title": "安裝 Hoyo Buddy",
+    "description": "一款功能豐富的機器人，能讓你的 Hoyoverse 體驗更上一層樓",
+    "addToServer": "新增到伺服器",
+    "addToServerSubtitle": "讓所有人都能使用",
+    "addToApps": "新增到我的應用程式中",
+    "addToAppsSubtitle": "隨時隨地使用"
   }
 }
