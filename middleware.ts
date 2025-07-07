@@ -27,7 +27,7 @@ function getLocale(request: NextRequest): string {
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname
-  
+
   // Check if pathname is missing locale
   const pathnameIsMissingLocale = locales.every(
     locale => !pathname.startsWith(`/${locale}/`) && pathname !== `/${locale}`
@@ -43,6 +43,8 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|preview.png|logo.png|avatars).*)',
+    // Skip all files that should not be internationalized. This includes files
+    // in the `api` directory, static files, image files, and other assets.
+    '/((?!api|_next/static|_next/image|favicon.ico|avatars|.*\\.png$).*)',
   ],
 }
