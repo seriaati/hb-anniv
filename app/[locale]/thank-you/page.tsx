@@ -4,10 +4,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Thank You | Hoyo Buddy',
-  description: 'Thank you for adding Hoyo Buddy to your Discord server! Get started with these helpful commands.',
+  description: 'Thanks for adding Hoyo Buddy, and welcome to an elevated Hoyoverse experience.',
   openGraph: {
     title: 'Thank You | Hoyo Buddy',
-    description: 'Thank you for adding Hoyo Buddy to your Discord server! Get started with these helpful commands.',
+    description: 'Thanks for adding Hoyo Buddy, and welcome to an elevated Hoyoverse experience.',
     url: 'https://one.hb.seria.moe/thank-you',
     siteName: 'Hoyo Buddy',
     images: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Thank You | Hoyo Buddy',
-    description: 'Thank you for adding Hoyo Buddy to your Discord server! Get started with these helpful commands.',
+    description: 'Thanks for adding Hoyo Buddy, and welcome to an elevated Hoyoverse experience.',
     images: [
       'https://one.hb.seria.moe/preview-thank-you.png'
     ],

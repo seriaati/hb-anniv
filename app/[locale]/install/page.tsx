@@ -4,10 +4,10 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: 'Install | Hoyo Buddy',
-  description: 'Install Hoyo Buddy to your Discord server or authorize it for your account.',
+  description: 'A feature-rich Discord bot to elevate your Hoyoverse experience.',
   openGraph: {
     title: 'Install | Hoyo Buddy',
-    description: 'Install Hoyo Buddy to your Discord server or authorize it for your account.',
+    description: 'A feature-rich Discord bot to elevate your Hoyoverse experience.',
     url: 'https://one.hb.seria.moe/install',
     siteName: 'Hoyo Buddy',
     images: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Install | Hoyo Buddy',
-    description: 'Install Hoyo Buddy to your Discord server or authorize it for your account.',
+    description: 'A feature-rich Discord bot to elevate your Hoyoverse experience.',
     images: 'https://one.hb.seria.moe/preview-install.png',
   },
 }
