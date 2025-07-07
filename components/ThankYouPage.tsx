@@ -7,7 +7,7 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { List, User, Settings, FileText, ChevronDown } from "lucide-react"
+import { List, User, Settings, FileText, ChevronDown, MessageCircleQuestion} from "lucide-react"
 import Image from "next/image"
 
 const fadeInUp = {
@@ -47,8 +47,8 @@ export default function ThankYouPage({ dict, locale }: ThankYouPageProps) {
     window.open('https://docs.hb.seria.moe/docs/features', '_blank')
   }
 
-  const handleOpenDocumentation = () => {
-    window.open('https://docs.hb.seria.moe/docs/', '_blank')
+  const handleOpenDiscordServer = () => {
+    window.open('https://discord.gg/ryfamUykRw', '_blank')
   }
 
   const scrollToGettingStarted = () => {
@@ -248,11 +248,11 @@ export default function ThankYouPage({ dict, locale }: ThankYouPageProps) {
               className="flex flex-col sm:flex-row gap-6 justify-center items-center"
             >
               <Button
-                onClick={handleOpenDocumentation}
+                onClick={handleOpenDiscordServer}
                 size="lg"
                 className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                <FileText className="w-5 h-5 mr-2" />
+                <MessageCircleQuestion className="w-5 h-5 mr-2" />
                 {dict.thankYou.buttons.documentation}
               </Button>
               
