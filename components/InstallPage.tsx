@@ -33,7 +33,7 @@ export default function InstallPage({ dict, locale }: InstallPageProps) {
   }
 
   const handleAddToApps = () => {
-    window.open('https://discord.com/oauth2/authorize?client_id=1000045812522430626&permissions=311296&scope=applications.commands&integration_type=1', '_blank')
+    window.open('https://discord.com/oauth2/authorize?client_id=1000045812522430626&permissions=311296&scope=applications.commands&integration_type=1&redirect_uri=https://one.hb.seria.moe/thank-you&response_type=token', '_blank')
   }
 
   return (
