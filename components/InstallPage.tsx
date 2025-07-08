@@ -12,20 +12,6 @@ interface InstallPageProps {
   locale: Locale
 }
 
-const fadeInUp = {
-  initial: { opacity: 0, y: 40 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.7, ease: "easeOut" },
-}
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1,
-    },
-  },
-}
-
 export default function InstallPage({ dict, locale }: InstallPageProps) {
   
   const handleAddToServer = () => {
@@ -116,39 +102,34 @@ export default function InstallPage({ dict, locale }: InstallPageProps) {
             </motion.p>
 
             <motion.div
-              className="mt-12"
-              initial="initial"
-              animate="animate"
-              variants={staggerContainer}
+              className="mt-12 flex flex-col sm:flex-row gap-6 justify-center items-center"
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.8, ease: "easeOut" }}
             >
-              <motion.div
-                variants={fadeInUp}
-                className="flex flex-col sm:flex-row gap-6 justify-center items-center"
-              >
-                <div className="flex flex-col items-center">
-                  <Button
-                    onClick={handleAddToServer}
-                    size="lg"
-                    className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                  >
-                    <PlusCircle className="w-5 h-5 mr-2" />
-                    {dict.installPage.addToServer}
-                  </Button>
-                  <p className="text-sm text-zinc-400 mt-2">{dict.installPage.addToServerSubtitle}</p>
-                </div>
-                
-                <div className="flex flex-col items-center">
-                  <Button
-                    onClick={handleAddToApps}
-                    size="lg"
-                    className="px-8 py-4 bg-zinc-800/70 hover:bg-zinc-700/80 border border-zinc-700/70 hover:border-zinc-600/70 text-white font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
-                  >
-                    <AppWindow className="w-5 h-5 mr-2" />
-                    {dict.installPage.addToApps}
-                  </Button>
-                  <p className="text-sm text-zinc-400 mt-2">{dict.installPage.addToAppsSubtitle}</p>
-                </div>
-              </motion.div>
+              <div className="flex flex-col items-center">
+                <Button
+                  onClick={handleAddToServer}
+                  size="lg"
+                  className="px-8 py-4 bg-gradient-to-r from-pink-500 to-purple-600 hover:from-pink-600 hover:to-purple-700 text-white font-semibold transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  <PlusCircle className="w-5 h-5 mr-2" />
+                  {dict.installPage.addToServer}
+                </Button>
+                <p className="text-sm text-zinc-400 mt-2">{dict.installPage.addToServerSubtitle}</p>
+              </div>
+              
+              <div className="flex flex-col items-center">
+                <Button
+                  onClick={handleAddToApps}
+                  size="lg"
+                  className="px-8 py-4 bg-zinc-800/70 hover:bg-zinc-700/80 border border-zinc-700/70 hover:border-zinc-600/70 text-white font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+                >
+                  <AppWindow className="w-5 h-5 mr-2" />
+                  {dict.installPage.addToApps}
+                </Button>
+                <p className="text-sm text-zinc-400 mt-2">{dict.installPage.addToAppsSubtitle}</p>
+              </div>
             </motion.div>
           </motion.div>
         </section>
