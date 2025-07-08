@@ -87,11 +87,11 @@
       },
       "generateCards": {
         "title": "Genereer karakter kaarten",
-        "description": "Maak prachtige karakter en team kaarten om je builds te laten zien."
+        "description": ""
       },
       "settings": {
         "title": "Pas je instellingen aan",
-        "description": "Wijzig taal, meldingen en themavoorkeuren."
+        "description": ""
       }
     },
     "buttons": {
