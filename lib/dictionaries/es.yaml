@@ -87,15 +87,15 @@
       },
       "generateCards": {
         "title": "Genera tarjetas de personajes",
-        "description": ""
+        "description": "Crea hermosas tarjetas de personajes y equipos para compartir tus builds."
       },
       "settings": {
         "title": "Personaliza tu configuración",
-        "description": ""
+        "description": "Cambia las preferencias de idioma, notificaciones y apariencia."
       }
     },
     "buttons": {
-      "documentation": "Documentación",
+      "documentation": "Servidor de soporte",
       "featureList": "Lista de características"
     }
   },
