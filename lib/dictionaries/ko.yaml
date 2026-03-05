@@ -1,0 +1,110 @@
+{
+  "hero": {
+    "title": "",
+    "subtitle": "",
+    "badge": ""
+  },
+  "stats": {
+    "title": "",
+    "commands": "",
+    "servers": "",
+    "users": "",
+    "stars": "",
+    "updates": "",
+    "accounts": ""
+  },
+  "timeline": {
+    "title": "",
+    "events": {
+      "project_started": "",
+      "first_release": "",
+      "reached_3000": "",
+      "reached_6000": "",
+      "anniversary": ""
+    },
+    "times": {
+      "project_started": "",
+      "first_release": "",
+      "reached_3000": "",
+      "reached_6000": "",
+      "anniversary": ""
+    }
+  },
+  "team": {
+    "title": "",
+    "roles": {
+      "developer": "개발자",
+      "designer": "디자이너",
+      "pr": "",
+      "documentation": "문서"
+    }
+  },
+  "supporters": {
+    "title": "",
+    "description": "",
+    "button": ""
+  },
+  "translators": {
+    "title": "",
+    "description": "",
+    "button": "",
+    "languages": {
+      "indonesian": "",
+      "vietnamese": "",
+      "chinese_simplified": "",
+      "spanish": "",
+      "chinese_traditional": "",
+      "french": "",
+      "dutch": "",
+      "japanese": "",
+      "arabic": "",
+      "russian": "",
+      "hindi": ""
+    }
+  },
+  "thanks": {
+    "title": "",
+    "message": "",
+    "closing": ""
+  },
+  "giveaway": {
+    "title": "",
+    "description": "",
+    "button": ""
+  },
+  "footer": {
+    "copyright": ""
+  },
+  "thankYou": {
+    "badge": "",
+    "title": "",
+    "description": "",
+    "gettingStarted": {
+      "title": "",
+      "addAccount": {
+        "title": "",
+        "description": ""
+      },
+      "generateCards": {
+        "title": "",
+        "description": ""
+      },
+      "settings": {
+        "title": "",
+        "description": ""
+      }
+    },
+    "buttons": {
+      "documentation": "",
+      "featureList": ""
+    }
+  },
+  "installPage": {
+    "title": "",
+    "description": "",
+    "addToServer": "",
+    "addToServerSubtitle": "",
+    "addToApps": "",
+    "addToAppsSubtitle": ""
+  }
+}
