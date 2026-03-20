@@ -13,7 +13,7 @@ interface InstallPageProps {
 }
 
 export default function InstallPage({ dict, locale }: InstallPageProps) {
-  
+
   const handleAddToServer = () => {
     window.open('https://discord.com/oauth2/authorize?client_id=1000045812522430626&permissions=311296&scope=bot+applications.commands&redirect_uri=https://one.hb.seria.moe/thank-you&response_type=code', '_blank')
   }
@@ -27,7 +27,7 @@ export default function InstallPage({ dict, locale }: InstallPageProps) {
       <div className="fixed top-4 right-4 z-50">
         <LanguageSwitcher currentLocale={locale} />
       </div>
-      
+
       {/* Colorful background gradients */}
       <div className="fixed inset-0 pointer-events-none overflow-hidden">
         {/* Pink blob */}
@@ -98,7 +98,7 @@ export default function InstallPage({ dict, locale }: InstallPageProps) {
               animate={{ opacity: 1 }}
               transition={{ duration: 0.7, delay: 0.6 }}
             >
-              {(dict.installPage as any).description}
+              {dict.installPage.description}
             </motion.p>
 
             <motion.div
@@ -118,7 +118,7 @@ export default function InstallPage({ dict, locale }: InstallPageProps) {
                 </Button>
                 <p className="text-sm text-zinc-400 mt-2">{dict.installPage.addToServerSubtitle}</p>
               </div>
-              
+
               <div className="flex flex-col items-center">
                 <Button
                   onClick={handleAddToApps}

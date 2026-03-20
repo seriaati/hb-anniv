@@ -1,12 +1,11 @@
-"use client"
-
 import LanguageSwitcher from './LanguageSwitcher'
 import { Dictionary, Locale } from '@/lib/i18n'
-import { useEffect, useRef, useMemo } from "react"
-import { motion, useInView, useScroll, useTransform, LazyMotion, domAnimation } from "framer-motion"
+import * as motion from "motion/react-client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { AnimatedCounter } from "@/components/AnimatedCounter"
+import { ParallaxBackground } from "@/components/ParallaxBackground"
 import { Users, Zap, Server, Star, RefreshCw, Link, Gift, Heart } from "lucide-react"
 import Image from "next/image"
 
@@ -33,37 +32,6 @@ const staggerContainer = {
       staggerChildren: 0.05,
     },
   },
-}
-
-function AnimatedCounter({ end, duration = 2 }: { end: number; duration?: number }) {
-  const ref = useRef<HTMLSpanElement>(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-
-  useEffect(() => {
-    if (!isInView) return
-
-    let startTime: number
-    let animationFrame: number
-
-    const animate = (currentTime: number) => {
-      if (!startTime) startTime = currentTime
-      const progress = Math.min((currentTime - startTime) / (duration * 1000), 1)
-
-      const currentValue = Math.floor(progress * end)
-      if (ref.current) {
-        ref.current.textContent = currentValue.toLocaleString()
-      }
-
-      if (progress < 1) {
-        animationFrame = requestAnimationFrame(animate)
-      }
-    }
-
-    animationFrame = requestAnimationFrame(animate)
-    return () => cancelAnimationFrame(animationFrame)
-  }, [isInView, end, duration])
-
-  return <span ref={ref}>0</span>
 }
 
 function StatCard({
@@ -95,9 +63,9 @@ function StatCard({
 
 function PersonCard({ name, role, avatar }: { name: string; role: string; avatar: string }) {
   // Check if avatar is animated (GIF or animated PNG)
-  const isAnimated = avatar?.includes('.gif') || 
+  const isAnimated = avatar?.includes('.gif') ||
     ['bunny.gg.png', 'syaorandesu.png', 'wocardo.png'].some(file => avatar?.includes(file))
-  
+
   return (
     <motion.div variants={fadeInUp}>
       <Card className="bg-zinc-900/40 backdrop-blur-md border-zinc-800/50 hover:border-zinc-700/70 transition-all duration-300 group">
@@ -147,66 +115,17 @@ export default function HoyoBuddyAnniversary({
   dict: Dictionary
   locale: Locale
 }) {
-  const { scrollYProgress } = useScroll()
-  
-  // Create transforms at component level (not in useMemo)
-  const meshY1 = useTransform(scrollYProgress, [0, 1], [0, 100])
-  const meshY2 = useTransform(scrollYProgress, [0, 1], [0, -75])  
-  const meshY3 = useTransform(scrollYProgress, [0, 1], [0, 50])
-
-  // Reference for scroll-based animations
-  const heroRef = useRef(null)
-  const statsRef = useRef(null)
-  const timelineRef = useRef(null)
-  const teamRef = useRef(null)
-  const supportersRef = useRef(null)
-  const translatorsRef = useRef(null)
-  const thanksRef = useRef(null)
-  const giveawayRef = useRef(null)
-
   return (
-    <LazyMotion features={domAnimation}>
-      <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
-        <div className="fixed top-4 right-4 z-50">
-          <LanguageSwitcher currentLocale={locale} />
-        </div>
-        {/* Optimized background gradients */}
-        <div className="fixed inset-0 pointer-events-none overflow-hidden">
-          {/* Pink blob */}
-          <motion.div
-            className="absolute -top-32 left-1/4 w-[40vw] h-[50vh] opacity-20"
-            style={{
-              y: meshY1,
-              background: "radial-gradient(circle at center, rgba(236, 72, 153, 0.4) 0%, rgba(236, 72, 153, 0) 70%)",
-              filter: "blur(40px)",
-            }}
-          />
-
-          {/* Purple blob */}
-          <motion.div
-            className="absolute top-1/2 -right-32 w-[35vw] h-[40vh] opacity-15"
-            style={{
-              y: meshY2,
-              background: "radial-gradient(circle at center, rgba(147, 51, 234, 0.4) 0%, rgba(147, 51, 234, 0) 70%)",
-              filter: "blur(40px)",
-            }}
-          />
-
-          {/* Blue blob */}
-          <motion.div
-            className="absolute bottom-1/4 left-1/3 w-[30vw] h-[35vh] opacity-10"
-            style={{
-              y: meshY3,
-              background: "radial-gradient(circle at center, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0) 70%)",
-              filter: "blur(40px)",
-            }}
-          />
-        </div>
+    <div className="min-h-screen relative overflow-hidden bg-gradient-to-br from-zinc-950 via-zinc-900 to-zinc-950">
+      <div className="fixed top-4 right-4 z-50">
+        <LanguageSwitcher currentLocale={locale} />
+      </div>
+      <ParallaxBackground />
 
       {/* Frosted glass container */}
       <div className="relative z-10 min-h-screen backdrop-blur-[60px] bg-zinc-900/20">
         {/* Hero Section */}
-        <section ref={heroRef} className="min-h-screen flex items-center justify-center relative px-4">
+        <section className="min-h-screen flex items-center justify-center relative px-4">
           <motion.div
             className="text-center max-w-4xl mx-auto relative z-10"
             initial={{ opacity: 0 }}
@@ -259,7 +178,7 @@ export default function HoyoBuddyAnniversary({
         </section>
 
         {/* Community Stats */}
-        <section ref={statsRef} className="py-20 px-4 relative z-10">
+        <section className="py-20 px-4 relative z-10">
           <motion.div
             className="max-w-6xl mx-auto"
             initial="initial"
@@ -286,7 +205,7 @@ export default function HoyoBuddyAnniversary({
         </section>
 
         {/* Timeline Section */}
-        <section ref={timelineRef} className="py-20 px-4 relative z-10">
+        <section className="py-20 px-4 relative z-10">
           <motion.div
             className="max-w-4xl mx-auto"
             initial="initial"
@@ -312,7 +231,7 @@ export default function HoyoBuddyAnniversary({
         </section>
 
         {/* Thank You - Team Members */}
-        <section ref={teamRef} className="py-20 px-4 relative z-10">
+        <section className="py-20 px-4 relative z-10">
           <motion.div
             className="max-w-6xl mx-auto"
             initial="initial"
@@ -424,7 +343,7 @@ export default function HoyoBuddyAnniversary({
         </section>
 
         {/* Thank You - Supporters */}
-        <section ref={supportersRef} className="py-20 px-4 relative z-10">
+        <section className="py-20 px-4 relative z-10">
           <motion.div
             className="max-w-6xl mx-auto"
             initial="initial"
@@ -457,18 +376,20 @@ export default function HoyoBuddyAnniversary({
 
             <motion.div className="text-center mt-8" variants={fadeInUp}>
               <Button
+                asChild
                 size="lg"
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
-                onClick={() => window.open("https://github.com/seriaati#support-my-work", "_blank")}
               >
-                {dict.supporters.button}
+                <a href="https://github.com/seriaati#support-my-work" target="_blank" rel="noreferrer">
+                  {dict.supporters.button}
+                </a>
               </Button>
             </motion.div>
           </motion.div>
         </section>
 
         {/* Thank You - Translators */}
-        <section ref={translatorsRef} className="py-20 px-4 relative z-10">
+        <section className="py-20 px-4 relative z-10">
           <motion.div
             className="max-w-6xl mx-auto"
             initial="initial"
@@ -507,18 +428,20 @@ export default function HoyoBuddyAnniversary({
 
             <motion.div className="text-center mt-8" variants={fadeInUp}>
               <Button
+                asChild
                 size="lg"
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
-                onClick={() => window.open("https://github.com/seriaati/hoyo-buddy/blob/main/CONTRIBUTING.md", "_blank")}
               >
-                {dict.translators.button}
+                <a href="https://github.com/seriaati/hoyo-buddy/blob/main/CONTRIBUTING.md" target="_blank" rel="noreferrer">
+                  {dict.translators.button}
+                </a>
               </Button>
             </motion.div>
           </motion.div>
         </section>
 
         {/* Thank You - You */}
-        <section ref={thanksRef} className="py-20 px-4 relative z-10">
+        <section className="py-20 px-4 relative z-10">
           <motion.div
             className="max-w-4xl mx-auto text-center"
             initial="initial"
@@ -545,7 +468,7 @@ export default function HoyoBuddyAnniversary({
         </section>
 
         {/* Anniversary Giveaway */}
-        <section ref={giveawayRef} className="py-20 px-4 relative z-10">
+        <section className="py-20 px-4 relative z-10">
           <motion.div
             className="max-w-4xl mx-auto text-center"
             initial="initial"
@@ -567,11 +490,13 @@ export default function HoyoBuddyAnniversary({
 
             <motion.div variants={fadeInUp}>
               <Button
+                asChild
                 size="lg"
                 className="bg-zinc-800/70 hover:bg-zinc-700/70 text-white text-lg px-8 py-3 rounded-full font-semibold border border-zinc-700/70 hover:border-pink-500/50 shadow-lg hover:shadow-pink-500/10 transition-all duration-300 backdrop-blur-sm"
-                onClick={() => window.open("https://link.seria.moe/hb-dc", "_blank")}
               >
-                {dict.giveaway.button}
+                <a href="https://link.seria.moe/hb-dc" target="_blank" rel="noreferrer">
+                  {dict.giveaway.button}
+                </a>
               </Button>
             </motion.div>
           </motion.div>
@@ -585,6 +510,5 @@ export default function HoyoBuddyAnniversary({
         </footer>
       </div>
     </div>
-    </LazyMotion>
   )
 }
