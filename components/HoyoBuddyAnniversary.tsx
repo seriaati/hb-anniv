@@ -359,15 +359,15 @@ export default function HoyoBuddyAnniversary({
             </motion.h2>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-              <PersonCard name="Lucas" role="50$" avatar="/avatars/nemboi.png" />
-              <PersonCard name="hakatashi" role="43$" avatar="/avatars/hakatashi.png" />
-              <PersonCard name="bunny" role="30$" avatar="/avatars/bunny.gg.png" />
+              <PersonCard name="Lucas" role="$50" avatar="/avatars/nemboi.png" />
+              <PersonCard name="hakatashi" role="$43" avatar="/avatars/hakatashi.png" />
+              <PersonCard name="bunny" role="$30" avatar="/avatars/bunny.gg.png" />
               <PersonCard name="Syaoran" role="$21" avatar="/avatars/syaorandesu.png" />
-              <PersonCard name="FichteFoll" role="10$" avatar="/avatars/fichtefoll.png" />
-              <PersonCard name="Crystal Arrow" role="5$" avatar="/avatars/crystalarrow.png" />
-              <PersonCard name="Chara Animates" role="5$" avatar="/avatars/charaanimates.png" />
-              <PersonCard name="Wocardo" role="5$" avatar="/avatars/wocardo.png" />
-              <PersonCard name="Trollerr" role="1$" avatar="/avatars/trollerr.png" />
+              <PersonCard name="FichteFoll" role="$10" avatar="/avatars/fichtefoll.png" />
+              <PersonCard name="Crystal Arrow" role="$5" avatar="/avatars/crystalarrow.png" />
+              <PersonCard name="Chara Animates" role="$5" avatar="/avatars/charaanimates.png" />
+              <PersonCard name="Wocardo" role="$5" avatar="/avatars/wocardo.png" />
+              <PersonCard name="Trollerr" role="$1" avatar="/avatars/trollerr.png" />
             </div>
 
             <motion.p className="text-center text-zinc-300 mt-12 text-lg leading-relaxed" variants={fadeInUp}>
